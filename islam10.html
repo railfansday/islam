@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengapa Tauhid Menjadi Inti Dakwah Para Nabi? - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #f093fb;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.08), rgba(245, 87, 108, 0.08));
+            border-right: 4px solid #f5576c;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* Nabi Cards */
+        .nabi-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(245, 87, 108, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .nabi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .nabi-card:hover::before {
+            opacity: 1;
+        }
+        .nabi-card:hover {
+            border-color: rgba(245, 87, 108, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.05);
+        }
+
+        .nabi-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.15), rgba(245, 87, 108, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f093fb;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .nabi-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            border-radius: 5px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f093fb, #f5576c, #f093fb);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .prose {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+        .prose strong {
+            color: #f093fb;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: rgba(240, 147, 251, 0.05);
+            border-left: 4px solid #f5576c;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+
+        .reason-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(240, 147, 251, 0.08);
+            border-radius: 10px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        .reason-card:hover {
+            border-color: rgba(240, 147, 251, 0.3);
+            background: rgba(240, 147, 251, 0.03);
+            transform: scale(1.02);
+        }
+
+        .reason-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .bg-dark-custom {
+            background-color: #0a0a0a;
+        }
+
+        .text-pink-light {
+            color: #f093fb;
+        }
+    </style>
+</head>
+<body class="bg-dark-custom text-white transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-pink-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-pink-400 transition font-medium text-white">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-pink-400 transition font-medium text-white">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-pink-400 transition font-medium text-white">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl text-white"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-pink-400 transition font-medium text-white py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-pink-400 transition font-medium text-white py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-pink-400 transition font-medium text-white py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1505880293915-1ce636c815b6?w=1200&h=600&fit=crop" alt="Dakwah Nabi Background" class="w-full h-full object-cover opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-dark-custom/90 to-dark-custom/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-pink-500/20 text-pink-400 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Aqidah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Mengapa Tauhid Menjadi Inti Dakwah Para Nabi?
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>10 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center text-white">
+                            <i class="fas fa-list-ul text-pink-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-pink-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-pink-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> Pengertian Dakwah
+                            </a>
+                            <a href="#alasan" class="block hover:text-pink-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> 6 Alasan Utama
+                            </a>
+                            <a href="#dakwah-nabi" class="block hover:text-pink-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> Dakwah Para Nabi
+                            </a>
+                            <a href="#hikmah" class="block hover:text-pink-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> Hikmah Dakwah
+                            </a>
+                            <a href="#penutup" class="block hover:text-pink-400 transition py-1 text-white">
+                                <i class="fas fa-chevron-left text-pink-400 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    وَلَقَدْ بَعَثْنَا فِي كُلِّ أُمَّةٍ رَّسُولًا أَنِ اعْبُدُوا اللَّهَ وَاجْتَنِبُوا الطَّاغُوتَ
+                                </p>
+                                <p class="text-center text-gray-300 text-sm italic">
+                                    "Dan sungguh, Kami telah mengutus seorang rasul untuk setiap umat (untuk menyerukan): 'Sembahlah Allah dan jauhilah thaghut (sesembahan selain Allah).'"<br />
+                                    <span class="font-semibold text-pink-400">QS. An-Nahl: 36</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong class="text-pink-400">Tauhid</strong> adalah inti dari seluruh risalah 
+                                    yang dibawa oleh para nabi dan rasul sejak Nabi Adam AS hingga Nabi Muhammad SAW. 
+                                    Tidak ada satu pun nabi yang diutus kecuali membawa pesan yang sama: 
+                                    <strong class="text-pink-400">"Laa ilaaha illallah"</strong> (tiada Tuhan selain Allah).
+                                </p>
+                                <p class="mt-3">
+                                    Mengapa tauhid menjadi fokus utama dakwah para nabi? Mengapa mereka 
+                                    menghabiskan waktu bertahun-tahun bahkan puluhan tahun untuk menegakkan 
+                                    kalimat tauhid? Artikel ini akan mengupas alasan-alasan mendasar 
+                                    mengapa tauhid menjadi inti dakwah para nabi.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Dakwah -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Dakwah
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-pink-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Kata "dakwah" berasal dari bahasa Arab <strong class="text-pink-400">دَعَا - يَدْعُو - دَعْوَةً</strong> 
+                                        yang berarti memanggil, menyeru, atau mengajak. Secara etimologi, dakwah 
+                                        adalah ajakan atau seruan.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-pink-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Dakwah adalah <strong class="text-pink-400">kegiatan mengajak manusia kepada jalan Allah</strong> 
+                                        dengan cara yang bijaksana dan penuh hikmah, menyeru kepada tauhid, 
+                                        menjauhi kemusyrikan, serta mengamalkan ajaran Islam secara menyeluruh.
+                                    </p>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-300">
+                                        <i class="fas fa-quote-left text-pink-400 mr-2"></i>
+                                        <strong>QS. Ali Imran: 104</strong> - "Dan hendaklah ada di antara kamu 
+                                        segolongan umat yang menyeru kepada kebajikan, menyuruh kepada yang 
+                                        ma'ruf dan mencegah dari yang munkar; merekalah orang-orang yang beruntung."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 6 Alasan Utama -->
+                    <section id="alasan" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">3</span>
+                                6 Alasan Utama Tauhid Menjadi Inti Dakwah Para Nabi
+                            </h2>
+
+                            <div class="space-y-3">
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">1</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid adalah Tujuan Penciptaan Manusia</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Allah menciptakan manusia semata-mata untuk beribadah kepada-Nya. 
+                                                Ibadah yang benar hanya bisa terwujud dengan tauhid yang murni.
+                                            </p>
+                                            <p class="text-xs text-pink-400/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Adz-Dzariyat: 56
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">2</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid adalah Jalan Keselamatan</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Tauhid adalah satu-satunya jalan menuju surga dan keselamatan 
+                                                dari neraka. Tanpa tauhid, amal ibadah tidak akan diterima.
+                                            </p>
+                                            <p class="text-xs text-pink-400/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. An-Nisa: 48
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">3</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid adalah Dasar Seluruh Amal</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Setiap amal ibadah harus dilandasi tauhid. Tanpa tauhid, amal 
+                                                menjadi sia-sia dan tidak memiliki nilai di sisi Allah.
+                                            </p>
+                                            <p class="text-xs text-pink-400/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Kahfi: 110
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">4</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid Membebaskan dari Penghambaan</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Tauhid membebaskan manusia dari penghambaan kepada makhluk. 
+                                                Hanya kepada Allah manusia tunduk dan patuh.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">5</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid Menyatukan Umat</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Tauhid menjadi pemersatu umat manusia di atas keyakinan yang sama. 
+                                                Perbedaan suku, bangsa, dan warna kulit tidak berarti di hadapan Allah.
+                                            </p>
+                                            <p class="text-xs text-pink-400/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Hujurat: 13
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reason-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="reason-number mt-1">6</span>
+                                        <div>
+                                            <h4 class="font-semibold text-pink-400">Tauhid adalah Pintu Masuk Islam</h4>
+                                            <p class="text-sm text-gray-300 mt-1">
+                                                Mengucapkan dua kalimat syahadat (Laa ilaaha illallah, Muhammadur Rasulullah) 
+                                                adalah syarat utama untuk menjadi seorang muslim.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Dakwah Para Nabi -->
+                    <section id="dakwah-nabi" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">4</span>
+                                Dakwah Para Nabi: Satu Pesan yang Sama
+                            </h2>
+
+                            <div class="prose mb-4 text-gray-300">
+                                <p>Semua nabi dan rasul diutus dengan membawa pesan yang sama: <strong class="text-pink-400">tauhid</strong>. 
+                                Berikut adalah beberapa contoh dakwah para nabi:</p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="nabi-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="nabi-icon">
+                                            <i class="fas fa-ship"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="nabi-number">1</span>
+                                                <h4 class="font-bold text-lg text-pink-400">Nabi Nuh AS</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Berdakwah selama 950 tahun dengan seruan: 
+                                                <strong class="text-pink-400">"Sembahlah Allah, sekali-kali tidak ada Tuhan bagimu selain Dia."</strong>
+                                                (QS. Al-A'raf: 59)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nabi-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="nabi-icon">
+                                            <i class="fas fa-star-and-crescent"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="nabi-number">2</span>
+                                                <h4 class="font-bold text-lg text-pink-400">Nabi Ibrahim AS</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Menghancurkan berhala dan menyeru: 
+                                                <strong class="text-pink-400">"Aku menghadapkan wajahku kepada (Allah) yang menciptakan langit dan bumi."</strong>
+                                                (QS. Al-An'am: 79)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nabi-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="nabi-icon">
+                                            <i class="fas fa-mountain"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="nabi-number">3</span>
+                                                <h4 class="font-bold text-lg text-pink-400">Nabi Musa AS</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Berhadapan dengan Firaun dan menyeru: 
+                                                <strong class="text-pink-400">"Sesungguhnya aku ini adalah utusan Tuhan semesta alam."</strong>
+                                                (QS. Asy-Syu'ara: 16)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nabi-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="nabi-icon">
+                                            <i class="fas fa-hand-holding-heart"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="nabi-number">4</span>
+                                                <h4 class="font-bold text-lg text-pink-400">Nabi Isa AS</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Menyeru Bani Israil: 
+                                                <strong class="text-pink-400">"Sesungguhnya Allah adalah Tuhanku dan Tuhanmu, maka sembahlah Dia."</strong>
+                                                (QS. Maryam: 36)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="nabi-card" style="border-color: rgba(245, 87, 108, 0.3);">
+                                    <div class="flex items-start gap-4">
+                                        <div class="nabi-icon" style="background: linear-gradient(135deg, rgba(240, 147, 251, 0.25), rgba(245, 87, 108, 0.25));">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="nabi-number" style="background: linear-gradient(135deg, #f5576c, #f093fb);">5</span>
+                                                <h4 class="font-bold text-lg text-pink-400">Nabi Muhammad SAW</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Selama 13 tahun di Mekkah, dakwahnya berfokus pada penguatan tauhid: 
+                                                <strong class="text-pink-400">"Katakanlah: Dialah Allah, Yang Maha Esa."</strong>
+                                                (QS. Al-Ikhlas: 1)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-pink-500/10 rounded-lg border border-pink-500/20">
+                                <p class="text-sm text-pink-400 text-center">
+                                    <i class="fas fa-link mr-2"></i>
+                                    <strong>Kesimpulan:</strong> Semua nabi memiliki pesan yang sama - mengajak kepada tauhid.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Hikmah Dakwah Tauhid -->
+                    <section id="hikmah" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">5</span>
+                                Hikmah Dakwah Tauhid
+                            </h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="reason-card">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <i class="fas fa-heart text-pink-400 text-xl"></i>
+                                        <h4 class="font-semibold text-pink-400">Ketenangan Jiwa</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Tauhid memberikan ketenangan karena menyadarkan manusia bahwa 
+                                        Allah adalah tempat bergantung dan berserah diri.
+                                    </p>
+                                </div>
+                                <div class="reason-card">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <i class="fas fa-hand-fist text-pink-400 text-xl"></i>
+                                        <h4 class="font-semibold text-pink-400">Kekuatan dan Keberanian</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Orang yang bertauhid tidak takut kepada siapapun kecuali Allah, 
+                                        memiliki keberanian menegakkan kebenaran.
+                                    </p>
+                                </div>
+                                <div class="reason-card">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <i class="fas fa-gem text-pink-400 text-xl"></i>
+                                        <h4 class="font-semibold text-pink-400">Kemuliaan dan Martabat</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Tauhid mengangkat derajat manusia dan memberinya kemuliaan 
+                                        di sisi Allah dan manusia.
+                                    </p>
+                                </div>
+                                <div class="reason-card">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <i class="fas fa-star text-pink-400 text-xl"></i>
+                                        <h4 class="font-semibold text-pink-400">Kebahagiaan Hakiki</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Kebahagiaan sejati hanya ditemukan dengan bertauhid, 
+                                        karena manusia diciptakan untuk mengenal dan menyembah Allah.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-pink-500/5 to-pink-500/10 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-pink-500/20">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-pink-400">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Tauhid adalah <strong class="text-pink-400">inti dari seluruh risalah para nabi</strong>. 
+                                    Semua nabi diutus dengan pesan yang sama: mengajak manusia kepada 
+                                    tauhid dan menjauhkan dari kemusyrikan.
+                                </p>
+                                <p class="mt-3">
+                                    Sebagai umat Nabi Muhammad SAW, kita memiliki tanggung jawab untuk 
+                                    melanjutkan misi dakwah tauhid ini. Kita harus senantiasa menjaga 
+                                    kemurnian tauhid dan mengajak orang lain kepada kalimat 
+                                    <strong class="text-pink-400">"Laa ilaaha illallah"</strong>.
+                                </p>
+                                <p class="mt-3 font-semibold text-pink-400">
+                                    "Ya Allah, jadikanlah kami sebagai da'i (penyeru) kepada tauhid-Mu, 
+                                    kuatkanlah kami dalam menegakkan kalimat-Mu, dan matikanlah kami 
+                                    dalam keadaan husnul khatimah."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/5 rounded-xl text-center">
+                                <p class="text-sm text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-pink-400"></i>
+                                    <strong class="text-white">Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-pink-500/10 rounded-lg text-center text-sm">
+                                <p class="text-gray-400">
+                                    <strong class="text-pink-400">Referensi:</strong> Al-Qur'an dan Terjemahannya, 
+                                    Kitabut Tauhid, Qashashul Anbiya, Tafsir Ibnu Katsir
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium text-white">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-500 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/20 hover:bg-green-500/30 text-green-400 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/20 hover:bg-gray-500/30 text-gray-400 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-dark-custom rounded-lg hover:shadow-lg transition font-semibold">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-white/10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-pink-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-pink-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode (always dark)
+            document.documentElement.classList.add('dark');
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            themeIcon.className = 'fas fa-sun text-xl text-white';
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    if (themeIcon.classList.contains('fa-sun')) {
+                        themeIcon.className = 'fas fa-moon text-xl text-white';
+                    } else {
+                        themeIcon.className = 'fas fa-sun text-xl text-white';
+                    }
+                });
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Mengapa Tauhid Menjadi Inti Dakwah Para Nabi?';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
