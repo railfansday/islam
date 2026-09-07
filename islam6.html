@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hari Akhir - Tanda-Tanda dan Persiapan Menghadapinya - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Glassmorphism */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .glassmorphism {
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8B0000 0%, #CC0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B0000 0%, #CC0000 100%);
+        }
+
+        .gradient-bg-dark {
+            background: linear-gradient(135deg, #4a0000 0%, #8B0000 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #8B0000;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .dark .arabic-text {
+            color: #ff6b6b;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(204, 0, 0, 0.08));
+            border-right: 4px solid #8B0000;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .dark .ayat-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.2), rgba(204, 0, 0, 0.2));
+            border-right-color: #ff6b6b;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* Tanda-tanda Kiamat Cards */
+        .sign-card {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.05), rgba(204, 0, 0, 0.05));
+            border: 2px solid rgba(139, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .sign-card:hover {
+            border-color: #8B0000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.15);
+        }
+        .dark .sign-card {
+            border-color: rgba(255, 107, 107, 0.15);
+        }
+        .dark .sign-card:hover {
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.1);
+        }
+
+        .sign-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .sign-badge {
+            display: inline-block;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            background: rgba(139, 0, 0, 0.1);
+            color: #8B0000;
+        }
+        .dark .sign-badge {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff6b6b;
+        }
+
+        .sign-badge-major {
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            color: white;
+        }
+
+        /* Persiapan Cards */
+        .prep-card {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.03), rgba(204, 0, 0, 0.03));
+            border: 1px solid rgba(139, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .prep-card:hover {
+            border-color: #8B0000;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(204, 0, 0, 0.08));
+        }
+        .dark .prep-card {
+            border-color: rgba(255, 107, 107, 0.1);
+        }
+        .dark .prep-card:hover {
+            border-color: #ff6b6b;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(255, 107, 107, 0.05));
+        }
+
+        .prep-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            border-radius: 5px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #8B0000, #CC0000, #ff6b6b);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .transition-theme {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .prose {
+            color: #374151;
+            line-height: 1.8;
+        }
+        .dark .prose {
+            color: #d1d5db;
+        }
+        .prose strong {
+            color: #8B0000;
+        }
+        .dark .prose strong {
+            color: #ff6b6b;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.06), rgba(204, 0, 0, 0.06));
+            border-left: 4px solid #8B0000;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+        .dark .hadith-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.15), rgba(204, 0, 0, 0.15));
+            border-left-color: #ff6b6b;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(204, 0, 0, 0.08));
+            border: 2px solid rgba(139, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .dark .warning-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.15), rgba(204, 0, 0, 0.1));
+            border-color: rgba(255, 107, 107, 0.2);
+        }
+
+        /* Timeline */
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B0000, #CC0000);
+            border: 3px solid white;
+            flex-shrink: 0;
+        }
+        .dark .timeline-dot {
+            border-color: #1a1a2e;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-red-700 dark:text-red-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-red-700 dark:hover:text-red-400 transition font-medium py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=600&fit=crop" alt="Hari Akhir Background" class="w-full h-full object-cover opacity-20 dark:opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-gray-50/90 dark:from-gray-900/90 dark:to-gray-900/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Aqidah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Hari Akhir - Tanda-Tanda dan Persiapan Menghadapinya
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>12 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center">
+                            <i class="fas fa-list-ul text-red-700 dark:text-red-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Pengertian Hari Akhir
+                            </a>
+                            <a href="#tanda-kecil" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Tanda-Tanda Kecil
+                            </a>
+                            <a href="#tanda-besar" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Tanda-Tanda Besar
+                            </a>
+                            <a href="#proses" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Proses Hari Akhir
+                            </a>
+                            <a href="#persiapan" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Persiapan Menghadapinya
+                            </a>
+                            <a href="#penutup" class="block hover:text-red-700 dark:hover:text-red-400 transition py-1">
+                                <i class="fas fa-chevron-left text-red-500 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    يَوْمَ تُبَدَّلُ الْأَرْضُ غَيْرَ الْأَرْضِ وَالسَّمَاوَاتُ ۖ وَبَرَزُوا لِلَّهِ الْوَاحِدِ الْقَهَّارِ
+                                </p>
+                                <p class="text-center text-gray-600 dark:text-gray-400 text-sm italic">
+                                    "(Yaitu) pada hari (ketika) bumi diganti dengan bumi yang lain dan (demikian pula) langit, dan mereka (semua) berkumpul di hadapan Allah Yang Maha Esa lagi Maha Perkasa."<br />
+                                    <span class="font-semibold">QS. Ibrahim: 48</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong>Hari Akhir (Yaumul Qiyamah)</strong> adalah hari kebangkitan seluruh umat manusia 
+                                    dari alam kubur untuk mempertanggungjawabkan seluruh amal perbuatannya di dunia. 
+                                    Iman kepada Hari Akhir merupakan rukun iman yang kelima dan menjadi salah satu 
+                                    fondasi utama dalam agama Islam.
+                                </p>
+                                <p class="mt-3">
+                                    Percaya kepada Hari Akhir akan mendorong seorang muslim untuk senantiasa 
+                                    berbuat baik, menjauhi maksiat, dan mempersiapkan diri dengan bekal amal 
+                                    shalih. Hari Akhir adalah kepastian yang tidak dapat diragukan lagi.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Hari Akhir -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Hari Akhir
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-red-700 dark:text-red-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Hari Akhir atau <strong>Yaumul Qiyamah</strong> (يَوْمُ الْقِيَامَةِ) terdiri dari 
+                                        kata "yaum" yang berarti hari dan "qiyamah" yang berarti kebangkitan. 
+                                        Secara etimologi berarti hari kebangkitan.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-red-700 dark:text-red-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Hari Akhir adalah <strong>hari dimulainya kehidupan akhirat</strong> setelah 
+                                        alam dunia ini hancur dan semua makhluk dibangkitkan dari kubur untuk 
+                                        menerima balasan amal perbuatannya.
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
+                                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
+                                        <i class="fas fa-skull text-red-700 dark:text-red-400 text-2xl mb-2"></i>
+                                        <p class="font-semibold text-sm">Yaumul Ba'ats</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">Hari Kebangkitan</p>
+                                    </div>
+                                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
+                                        <i class="fas fa-balance-scale text-red-700 dark:text-red-400 text-2xl mb-2"></i>
+                                        <p class="font-semibold text-sm">Yaumul Hisab</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">Hari Perhitungan</p>
+                                    </div>
+                                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
+                                        <i class="fas fa-gavel text-red-700 dark:text-red-400 text-2xl mb-2"></i>
+                                        <p class="font-semibold text-sm">Yaumud Din</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">Hari Pembalasan</p>
+                                    </div>
+                                    <div class="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">
+                                        <i class="fas fa-hourglass-end text-red-700 dark:text-red-400 text-2xl mb-2"></i>
+                                        <p class="font-semibold text-sm">Yaumul Hisab</p>
+                                        <p class="text-xs text-gray-600 dark:text-gray-400">Hari Perhitungan</p>
+                                    </div>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                                        <i class="fas fa-quote-left text-red-700 dark:text-red-400 mr-2"></i>
+                                        <strong>QS. Al-Zalzalah: 6-8</strong> - "Pada hari itu manusia keluar dari kuburnya 
+                                        dalam keadaan bermacam-macam, supaya diperlihatkan kepada mereka (balasan) 
+                                        pekerjaan mereka. Barangsiapa yang mengerjakan kebaikan seberat zarrah pun, 
+                                        niscaya dia akan melihat (balasan)nya. Dan barangsiapa yang mengerjakan 
+                                        kejahatan seberat zarrah pun, niscaya dia akan melihat (balasan)nya."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tanda-Tanda Kecil -->
+                    <section id="tanda-kecil" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">3</span>
+                                Tanda-Tanda Kecil Hari Kiamat
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>
+                                    Tanda-tanda kecil kiamat adalah peristiwa-peristiwa yang terjadi sebelum 
+                                    tanda-tanda besar muncul. Banyak di antaranya telah terjadi dan kita saksikan 
+                                    di zaman sekarang.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Ilmu Dicabut</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Ilmu agama semakin berkurang dan orang-orang bodoh semakin banyak.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Perusakan Moral</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Maksiat dan kemungkaran merajalela, zina dan riba menjadi hal biasa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-hand-peace"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Tidak Amanah</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Amanah disia-siakan, orang yang tidak kompeten memegang jabatan penting.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Pembangunan Megah</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Orang-orang berlomba membangun gedung-gedung tinggi dan megah.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Waktu Terasa Cepat</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Waktu terasa berjalan sangat cepat, satu tahun terasa seperti satu bulan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sign-card">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon">
+                                            <i class="fas fa-venus-mars"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-sm">Perempuan Berpakaian Tapi Telanjang</h4>
+                                            <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                                Munculnya mode pakaian yang minim dan tidak menutup aurat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border-l-4 border-red-500">
+                                <p class="text-sm text-red-700 dark:text-red-300">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>Catatan:</strong> Banyak tanda-tanda kecil telah terjadi dan kita menyaksikannya 
+                                    saat ini. Ini adalah peringatan bagi kita semua.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tanda-Tanda Besar -->
+                    <section id="tanda-besar" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">4</span>
+                                Tanda-Tanda Besar Hari Kiamat
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>
+                                    Tanda-tanda besar adalah peristiwa luar biasa yang terjadi menjelang hari kiamat. 
+                                    Semua tanda ini akan terjadi secara berurutan.
+                                </p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="sign-card" style="border-color: #8B0000; background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(204,0,0,0.05));">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon" style="background: linear-gradient(135deg, #4a0000, #8B0000);">
+                                            <i class="fas fa-meteor"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4 class="font-bold">Keluarnya Dajjal</h4>
+                                                <span class="sign-badge sign-badge-major">Tanda Besar</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Dajjal adalah fitnah terbesar yang akan muncul di akhir zaman. 
+                                                Ia mengaku sebagai Tuhan dan akan menguasai sebagian besar bumi. 
+                                                Nabi Isa AS akan turun untuk membunuhnya.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sign-card" style="border-color: #8B0000; background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(204,0,0,0.05));">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon" style="background: linear-gradient(135deg, #4a0000, #8B0000);">
+                                            <i class="fas fa-hand-sparkles"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4 class="font-bold">Turunnya Nabi Isa AS</h4>
+                                                <span class="sign-badge sign-badge-major">Tanda Besar</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Nabi Isa AS akan turun ke bumi di dekat menara putih di Damaskus. 
+                                                Beliau akan menjadi pemimpin umat Islam, membunuh Dajjal, 
+                                                dan menegakkan keadilan di muka bumi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sign-card" style="border-color: #8B0000; background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(204,0,0,0.05));">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon" style="background: linear-gradient(135deg, #4a0000, #8B0000);">
+                                            <i class="fas fa-cloud-sun"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4 class="font-bold">Terbitnya Matahari dari Barat</h4>
+                                                <span class="sign-badge sign-badge-major">Tanda Besar</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Matahari akan terbit dari arah barat (sebaliknya dari biasanya). 
+                                                Setelah peristiwa ini, pintu taubat akan ditutup.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sign-card" style="border-color: #8B0000; background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(204,0,0,0.05));">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon" style="background: linear-gradient(135deg, #4a0000, #8B0000);">
+                                            <i class="fas fa-dragon"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4 class="font-bold">Keluarnya Dabbah (Binatang Melata)</h4>
+                                                <span class="sign-badge sign-badge-major">Tanda Besar</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Seekor binatang aneh akan keluar dari bumi dan berbicara kepada manusia, 
+                                                menandai orang-orang beriman dan orang-orang kafir.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sign-card" style="border-color: #8B0000; background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(204,0,0,0.05));">
+                                    <div class="flex items-start gap-3">
+                                        <div class="sign-icon" style="background: linear-gradient(135deg, #4a0000, #8B0000);">
+                                            <i class="fas fa-fire"></i>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center gap-2">
+                                                <h4 class="font-bold">Keluarnya Api dari Yaman</h4>
+                                                <span class="sign-badge sign-badge-major">Tanda Besar</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Api besar akan keluar dari arah Yaman dan akan menggiring manusia 
+                                                menuju tempat berkumpul (Padang Mahsyar).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border-l-4 border-red-500">
+                                <p class="text-sm text-red-700 dark:text-red-300">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>Peringatan:</strong> Tanda-tanda besar akan terjadi secara berurutan dan 
+                                    sangat cepat. Setelah matahari terbit dari barat, pintu taubat ditutup.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Proses Hari Akhir -->
+                    <section id="proses" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">5</span>
+                                Proses Terjadinya Hari Akhir
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>Berikut adalah tahapan-tahapan yang akan terjadi pada Hari Akhir:</p>
+                            </div>
+
+                            <div class="space-y-4 relative pl-4">
+                                <!-- Timeline Item 1 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">1. Kematian Seluruh Makhluk</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Malaikat Israfil meniup sangkakala pertama, semua makhluk di langit 
+                                                dan bumi mati kecuali yang dikehendaki Allah.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 2 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">2. Kebangkitan (Yaumul Ba'ats)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Tiupan sangkakala kedua, seluruh manusia dibangkitkan dari kubur 
+                                                dalam keadaan telanjang dan tidak bersepatu.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 3 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">3. Pengumpulan (Yaumul Mahsyar)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Seluruh manusia dikumpulkan di Padang Mahsyar dalam keadaan 
+                                                berkeringat dan menunggu pengadilan Allah.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 4 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">4. Perhitungan Amal (Yaumul Hisab)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Semua amal perbuatan manusia dihitung dengan teliti. 
+                                                Kitab catatan amal dibagikan kepada masing-masing orang.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 5 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">5. Penimbangan Amal (Yaumul Mizan)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Amal perbuatan ditimbang dengan timbangan yang adil. 
+                                                Orang yang berat timbangan kebaikannya akan masuk surga.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Timeline Item 6 -->
+                                <div class="timeline-item">
+                                    <div class="flex items-start gap-3">
+                                        <div class="timeline-dot mt-1"></div>
+                                        <div>
+                                            <h4 class="font-semibold">6. Pemberian Balasan (Yaumul Jaza)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                Orang-orang beriman dimasukkan ke surga dan orang-orang kafir 
+                                                dimasukkan ke neraka. Inilah kehidupan abadi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border-l-4 border-red-500">
+                                <p class="text-sm text-red-700 dark:text-red-300">
+                                    <i class="fas fa-quote-left mr-2"></i>
+                                    "Dan ditiuplah sangkakala, maka matilah semua yang di langit dan di bumi 
+                                    kecuali siapa yang dikehendaki Allah. Kemudian ditiup sekali lagi, 
+                                    maka tiba-tiba mereka berdiri menunggu (putusan)." 
+                                    <span class="text-xs">(QS. Az-Zumar: 68)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Persiapan Menghadapi Hari Akhir -->
+                    <section id="persiapan" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">6</span>
+                                Persiapan Menghadapi Hari Akhir
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>
+                                    Menghadapi Hari Akhir yang pasti terjadi, setiap muslim harus mempersiapkan 
+                                    diri dengan sebaik-baiknya. Berikut adalah langkah-langkah persiapan:
+                                </p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">1</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Meningkatkan Iman dan Taqwa</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Memperkuat keyakinan kepada Allah, malaikat, kitab-kitab, rasul-rasul, 
+                                                hari akhir, dan qada-qadar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">2</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Melaksanakan Ibadah dengan Khusyuk</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Menjalankan shalat, puasa, zakat, haji, dan ibadah lainnya dengan 
+                                                penuh keikhlasan dan kekhusyukan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">3</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Memperbanyak Amal Shalih</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Bersedekah, membantu sesama, menuntut ilmu, berdakwah, dan semua 
+                                                amal kebaikan lainnya.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">4</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Bertaubat dan Memohon Ampunan</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Bertaubat dari segala dosa, memohon ampunan kepada Allah, 
+                                                dan berusaha untuk tidak mengulangi dosa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">5</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Membaca dan Mengamalkan Al-Qur'an</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Membaca, memahami, dan mengamalkan isi Al-Qur'an dalam kehidupan 
+                                                sehari-hari.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">6</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Mengingat Kematian</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Selalu mengingat kematian sebagai pengingat untuk mempersiapkan 
+                                                bekal menuju akhirat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="prep-card">
+                                    <div class="flex items-start gap-3">
+                                        <span class="prep-number">7</span>
+                                        <div>
+                                            <h4 class="font-semibold text-red-700 dark:text-red-400">Berdoa Memohon Keteguhan Iman</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Senantiasa berdoa kepada Allah agar diberikan keteguhan iman 
+                                                dan kebaikan di akhirat.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="warning-box mt-4">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-clock text-red-700 dark:text-red-400 text-2xl mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-red-700 dark:text-red-400">Waktu Tidak Akan Menunggu</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                            Kematian dan hari kiamat bisa datang kapan saja. Jangan tunda-tunda 
+                                            untuk berbuat baik dan bertaubat. Hari ini adalah kesempatan terbaik 
+                                            untuk mempersiapkan diri.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-red-200 dark:border-red-800">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-red-800 dark:text-red-300">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Hari Akhir adalah kepastian yang tidak dapat diragukan lagi. Setiap manusia 
+                                    akan merasakan kematian dan akan dibangkitkan kembali untuk mempertanggungjawabkan 
+                                    seluruh amal perbuatannya di dunia.
+                                </p>
+                                <p class="mt-3">
+                                    Tanda-tanda kiamat semakin dekat. Kita menyaksikan banyak tanda-tanda kecil 
+                                    telah terjadi. Ini adalah peringatan bagi kita untuk segera bertaubat dan 
+                                    mempersiapkan diri dengan bekal amal shalih.
+                                </p>
+                                <p class="mt-3 font-semibold text-red-700 dark:text-red-300">
+                                    "Ya Allah, selamatkanlah kami dari siksa neraka, masukkanlah kami ke dalam surga, 
+                                    dan janganlah Engkau hinakan kami di hari kiamat. Aamiin."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl text-center">
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-red-700"></i>
+                                    <strong>Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center text-sm">
+                                <p class="text-gray-600 dark:text-gray-400">
+                                    <strong>Referensi:</strong> Al-Qur'an dan Terjemahannya, Shahih Bukhari & Muslim, 
+                                    Kitab Al-Iman, Tafsir Ibnu Katsir, Kitab Tanda-Tanda Kiamat
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-700 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-600 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/10 hover:bg-gray-500/20 text-gray-600 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg transition">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-red-700 dark:hover:text-red-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                themeIcon.className = isDark ? 'fas fa-sun text-xl' : 'fas fa-moon text-xl';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fas fa-sun text-xl';
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Hari Akhir - Tanda-Tanda dan Persiapan Menghadapinya';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
