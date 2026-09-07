@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rukun Iman - Pilar Fundamental Seorang Muslim - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .dark body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        /* Glassmorphism untuk dark mode */
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dark .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #ffd700;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .dark .arabic-text {
+            color: #ffd700;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(247, 151, 30, 0.08));
+            border-right: 4px solid #ffd700;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .dark .ayat-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(247, 151, 30, 0.08));
+            border-right-color: #ffd700;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* Rukun Iman Cards */
+        .rukun-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .rukun-card:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.05);
+        }
+        .dark .rukun-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 215, 0, 0.1);
+        }
+        .dark .rukun-card:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .rukun-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .rukun-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(247, 151, 30, 0.2), rgba(255, 210, 0, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffd700;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            border-radius: 5px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f7971e, #ffd200, #ffed4a);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .transition-theme {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .prose {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+        .dark .prose {
+            color: #d1d5db;
+        }
+        .prose strong {
+            color: #ffd700;
+        }
+        .dark .prose strong {
+            color: #ffd700;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: rgba(255, 215, 0, 0.05);
+            border-left: 4px solid #ffd700;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+        .dark .hadith-box {
+            background: rgba(255, 215, 0, 0.05);
+            border-left-color: #ffd700;
+        }
+
+        .pillar-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 215, 0, 0.08);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+        }
+        .pillar-box:hover {
+            border-color: rgba(255, 215, 0, 0.2);
+            background: rgba(255, 215, 0, 0.02);
+        }
+        .dark .pillar-box {
+            background: rgba(255, 255, 255, 0.02);
+            border-color: rgba(255, 215, 0, 0.08);
+        }
+        .dark .pillar-box:hover {
+            border-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .warning-box {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .dark .warning-box {
+            background: rgba(255, 215, 0, 0.05);
+            border-color: rgba(255, 215, 0, 0.1);
+        }
+
+        .bg-dark-custom {
+            background-color: #0a0a0a;
+        }
+
+        .text-gold {
+            color: #ffd700;
+        }
+
+        .border-gold {
+            border-color: #ffd700;
+        }
+    </style>
+</head>
+<body class="bg-dark-custom text-white transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-yellow-500 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-yellow-400 transition font-medium text-white">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-yellow-400 transition font-medium text-white">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-yellow-400 transition font-medium text-white">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl text-white"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-yellow-400 transition font-medium text-white py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-yellow-400 transition font-medium text-white py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-yellow-400 transition font-medium text-white py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&h=600&fit=crop" alt="Rukun Iman Background" class="w-full h-full object-cover opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-dark-custom/90 to-dark-custom/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Aqidah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Rukun Iman - Pilar Fundamental Seorang Muslim
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>10 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center text-white">
+                            <i class="fas fa-list-ul text-yellow-500 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-yellow-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-yellow-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> Pengertian Rukun Iman
+                            </a>
+                            <a href="#rukun-iman" class="block hover:text-yellow-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> 6 Rukun Iman
+                            </a>
+                            <a href="#perbedaan" class="block hover:text-yellow-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> Iman vs Islam
+                            </a>
+                            <a href="#tingkatan" class="block hover:text-yellow-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> Tingkatan Iman
+                            </a>
+                            <a href="#penutup" class="block hover:text-yellow-400 transition py-1 text-white">
+                                <i class="fas fa-chevron-left text-yellow-500 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ
+                                </p>
+                                <p class="text-center text-gray-300 text-sm italic">
+                                    "Rasul telah beriman kepada Al-Qur'an yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman. Semuanya beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, dan rasul-rasul-Nya."<br />
+                                    <span class="font-semibold text-yellow-400">QS. Al-Baqarah: 285</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong class="text-yellow-400">Rukun Iman</strong> adalah pondasi dasar keyakinan 
+                                    yang harus dimiliki oleh setiap muslim. Rukun iman terdiri dari enam pilar 
+                                    yang menjadi landasan keimanan seseorang. Tanpa meyakini keenam rukun ini, 
+                                    keimanan seseorang tidaklah sempurna.
+                                </p>
+                                <p class="mt-3">
+                                    Rukun iman merupakan inti dari ajaran Islam yang mengatur hubungan vertikal 
+                                    antara manusia dengan Allah SWT dan hubungan horizontal dengan sesama makhluk. 
+                                    Memahami dan mengamalkan rukun iman adalah kewajiban bagi setiap muslim.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Rukun Iman -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Rukun Iman
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-yellow-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Kata "rukun" berarti tiang atau pilar, sedangkan "iman" berarti keyakinan 
+                                        atau kepercayaan. Rukun iman secara bahasa berarti <strong>pilar-pilar keyakinan</strong> 
+                                        yang menjadi fondasi keimanan seseorang.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-yellow-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Rukun iman adalah <strong>enam perkara yang wajib diyakini oleh setiap muslim</strong> 
+                                        yang menjadi landasan keimanan. Rukun iman bersifat fundamental dan 
+                                        tidak dapat ditawar-tawar.
+                                    </p>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-300">
+                                        <i class="fas fa-quote-left text-yellow-400 mr-2"></i>
+                                        <strong>Hadits Riwayat Muslim:</strong> "Iman adalah engkau beriman kepada Allah, 
+                                        malaikat-malaikat-Nya, kitab-kitab-Nya, rasul-rasul-Nya, hari akhir, dan beriman 
+                                        kepada takdir yang baik maupun yang buruk." 
+                                        <span class="text-xs text-gray-500">(HR. Muslim)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 6 Rukun Iman -->
+                    <section id="rukun-iman" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">3</span>
+                                6 Rukun Iman
+                            </h2>
+
+                            <div class="prose mb-4 text-gray-300">
+                                <p>Berikut adalah 6 rukun iman yang wajib diyakini oleh setiap muslim:</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <!-- Rukun 1 -->
+                                <div class="rukun-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-chess-king"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">1</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Allah</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini dengan sepenuh hati bahwa Allah adalah satu-satunya Tuhan 
+                                                yang berhak disembah. Mengimani keesaan Allah dalam rububiyah 
+                                                (kekuasaan), uluhiyah (ibadah), dan asma wa sifat (nama dan sifat)-Nya.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Ikhlas: 1-4
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rukun 2 -->
+                                <div class="rukun-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-angel"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">2</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Malaikat</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini adanya malaikat-malaikat Allah yang diciptakan dari cahaya, 
+                                                tidak berjenis kelamin, dan senantiasa taat kepada Allah. 
+                                                Di antaranya: Jibril, Mikail, Israfil, Izrail, dan lainnya.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Baqarah: 285
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rukun 3 -->
+                                <div class="rukun-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-book-quran"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">3</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Kitab-Kitab</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini kitab-kitab yang diturunkan Allah kepada para rasul-Nya. 
+                                                Di antaranya: Taurat (Musa), Zabur (Daud), Injil (Isa), dan 
+                                                Al-Qur'an (Muhammad) sebagai kitab terakhir dan paling sempurna.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Baqarah: 4
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rukun 4 -->
+                                <div class="rukun-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-user-tie"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">4</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Rasul</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini rasul-rasul yang diutus Allah untuk membimbing umat manusia. 
+                                                Dari Nabi Adam AS hingga Nabi Muhammad SAW sebagai penutup para nabi. 
+                                                Wajib mengimani 25 rasul yang disebutkan dalam Al-Qur'an.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-An'am: 48
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rukun 5 -->
+                                <div class="rukun-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-hourglass-end"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">5</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Hari Akhir</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini hari kebangkitan, hisab (perhitungan amal), surga dan neraka, 
+                                                serta kehidupan setelah kematian. Hari Akhir adalah kepastian yang 
+                                                menjadi motivasi untuk berbuat baik.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Zalzalah: 6-8
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rukun 6 -->
+                                <div class="rukun-card" style="border-color: rgba(255, 215, 0, 0.2);">
+                                    <div class="flex items-start gap-4">
+                                        <div class="rukun-icon">
+                                            <i class="fas fa-pen-fancy"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="rukun-number">6</span>
+                                                <h4 class="font-bold text-lg text-yellow-400">Iman kepada Qada dan Qadar</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Meyakini takdir Allah yang baik maupun yang buruk. Iman kepada qada 
+                                                dan qadar adalah mengakui bahwa segala sesuatu terjadi atas kehendak 
+                                                dan izin Allah SWT.
+                                            </p>
+                                            <p class="text-xs text-yellow-500/70 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Qamar: 49
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/20">
+                                <p class="text-sm text-yellow-400 text-center">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    <strong>Catatan:</strong> Keenam rukun iman ini harus diyakini secara bersamaan. 
+                                    Jika ada satu yang tidak diimani, maka keimanan seseorang tidaklah sempurna.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Perbedaan Iman dan Islam -->
+                    <section id="perbedaan" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">4</span>
+                                Perbedaan Iman dan Islam
+                            </h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i class="fas fa-heart text-yellow-400 text-2xl"></i>
+                                        <h4 class="font-bold text-lg text-yellow-400">Iman</h4>
+                                    </div>
+                                    <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                                        <li>Keyakinan dalam hati</li>
+                                        <li>Terkait dengan rukun iman (6 perkara)</li>
+                                        <li>Bersifat batiniah</li>
+                                        <li>Dapat naik dan turun</li>
+                                        <li>Tempatnya di hati</li>
+                                    </ul>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i class="fas fa-hand-peace text-yellow-400 text-2xl"></i>
+                                        <h4 class="font-bold text-lg text-yellow-400">Islam</h4>
+                                    </div>
+                                    <ul class="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                                        <li>Ketaatan dan penyerahan diri</li>
+                                        <li>Terkait dengan rukun Islam (5 perkara)</li>
+                                        <li>Bersifat lahiriah</li>
+                                        <li>Terlihat dalam amal perbuatan</li>
+                                        <li>Tempatnya di anggota badan</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-yellow-500/10 rounded-lg border border-yellow-500/20 text-center">
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-link mr-2"></i>
+                                    <strong>Iman dan Islam adalah satu kesatuan.</strong> 
+                                    Iman tanpa amal adalah sia-sia, dan amal tanpa iman tidak diterima.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tingkatan Iman -->
+                    <section id="tingkatan" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">5</span>
+                                Tingkatan Iman
+                            </h2>
+
+                            <div class="prose text-gray-300 mb-4">
+                                <p>Iman memiliki tiga tingkatan yang saling berkaitan:</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="pillar-box text-center">
+                                    <div class="text-4xl mb-3 text-yellow-400">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-yellow-400 mb-2">Ma'rifah</h4>
+                                    <p class="text-sm text-gray-300">
+                                        <strong>Mengenal Allah</strong> melalui nama-nama dan sifat-sifat-Nya. 
+                                        Ini adalah tingkatan iman yang paling dasar.
+                                    </p>
+                                </div>
+                                <div class="pillar-box text-center" style="border-color: rgba(255, 215, 0, 0.2);">
+                                    <div class="text-4xl mb-3 text-yellow-400">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-yellow-400 mb-2">Mahabbah</h4>
+                                    <p class="text-sm text-gray-300">
+                                        <strong>Mencintai Allah</strong> dengan segenap hati dan mendahulukan 
+                                        kecintaan kepada-Nya di atas segala sesuatu.
+                                    </p>
+                                </div>
+                                <div class="pillar-box text-center" style="border-color: rgba(255, 215, 0, 0.3);">
+                                    <div class="text-4xl mb-3 text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="font-bold text-lg text-yellow-400 mb-2">Ihsan</h4>
+                                    <p class="text-sm text-gray-300">
+                                        <strong>Beribadah seolah-olah melihat Allah</strong>, dan jika tidak 
+                                        melihat-Nya, yakin bahwa Allah melihat kita.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 hadith-box">
+                                <p class="text-sm text-gray-300">
+                                    <i class="fas fa-quote-left text-yellow-400 mr-2"></i>
+                                    <strong>Hadits Riwayat Bukhari:</strong> "Ihsan adalah engkau beribadah kepada 
+                                    Allah seolah-olah engkau melihat-Nya, dan jika engkau tidak melihat-Nya, 
+                                    maka sesungguhnya Dia melihatmu." 
+                                    <span class="text-xs text-gray-500">(HR. Bukhari)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-yellow-500/5 to-yellow-500/10 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-yellow-500/20">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-yellow-400">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Rukun iman adalah <strong class="text-yellow-400">pilar fundamental</strong> 
+                                    yang menjadi dasar keimanan seorang muslim. Keenam rukun ini harus diimani 
+                                    secara utuh dan menyeluruh.
+                                </p>
+                                <p class="mt-3">
+                                    Memahami rukun iman bukan hanya sekadar pengetahuan, tetapi harus diikuti 
+                                    dengan <strong class="text-yellow-400">pengamalan dalam kehidupan</strong> 
+                                    sehari-hari. Iman yang sejati akan tercermin dalam akhlak dan perilaku 
+                                    seorang muslim.
+                                </p>
+                                <p class="mt-3 font-semibold text-yellow-400">
+                                    "Ya Allah, kuatkanlah iman kami, tetapkanlah hati kami di atas agama-Mu, 
+                                    dan janganlah Engkau sesatkan kami setelah Engkau memberi petunjuk."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/5 rounded-xl text-center">
+                                <p class="text-sm text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-yellow-500"></i>
+                                    <strong class="text-white">Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-yellow-500/10 rounded-lg text-center text-sm">
+                                <p class="text-gray-400">
+                                    <strong class="text-yellow-400">Referensi:</strong> Al-Qur'an dan Terjemahannya, 
+                                    Shahih Bukhari & Muslim, Kitab Al-Iman, Tafsir Ibnu Katsir
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium text-white">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-500 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/20 hover:bg-green-500/30 text-green-400 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/20 hover:bg-gray-500/30 text-gray-400 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-dark-custom rounded-lg hover:shadow-lg transition font-semibold">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-white/10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode (always dark)
+            document.documentElement.classList.add('dark');
+
+            // Theme toggle (just for icon, keeps dark mode)
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            themeIcon.className = 'fas fa-sun text-xl text-white';
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    // Toggle just for icon, but keep dark mode
+                    if (themeIcon.classList.contains('fa-sun')) {
+                        themeIcon.className = 'fas fa-moon text-xl text-white';
+                    } else {
+                        themeIcon.className = 'fas fa-sun text-xl text-white';
+                    }
+                });
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Rukun Iman - Pilar Fundamental Seorang Muslim';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
