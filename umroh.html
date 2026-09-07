@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Bait Travel & Umroh - Perjalanan Ibadah Nyaman & Sesuai Sunnah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            800: '#0B3C3F',
+                            700: '#0F5257',
+                            600: '#14656B',
+                            50: '#F0F7F7',
+                        },
+                        gold: {
+                            300: '#E8D28B',
+                            400: '#DCB959',
+                            500: '#D4AF37',
+                            600: '#C5A059',
+                            700: '#9B7A30',
+                        },
+                        sand: '#FAF8F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Pattern & Styles */
+        .bg-islamic-pattern {
+            background-color: #0F5257;
+            background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #0F5257 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.98;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+        }
+        
+        .gold-text {
+            background: linear-gradient(135deg, #D4AF37, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #C5A059;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-sand font-sans text-gray-800 flex flex-col min-h-screen antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-800 text-gold-300 text-xs py-2 px-4 border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span><i class="fas fa-certificate text-gold-500 mr-1.5"></i> Izin Resmi Kemenag RI No. <strong>PPIU/U.204/2022</strong></span>
+                <span class="hidden sm:inline"><i class="fas fa-clock text-gold-500 mr-1.5"></i> Layanan 24/7 Ramah Jamaah</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+6281234567890" class="hover:text-white transition"><i class="fas fa-phone mr-1"></i> (021) 8899-7766</a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-white transition"><i class="fab fa-whatsapp text-emerald-400 mr-1"></i> WhatsApp Hotline</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 bg-emerald-700 rounded-xl flex items-center justify-center text-gold-400 font-serif text-2xl font-bold shadow-md border border-gold-500/30 group-hover:scale-105 transition-transform">
+                    🕌
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-emerald-800 font-serif block leading-tight">AL-BAIT</span>
+                    <span class="text-[10px] text-gold-600 tracking-widest uppercase font-semibold block">Travel Umroh & Haji Plus</span>
+                </div>
+            </a>
+
+            <!-- Nav Links Desktop -->
+            <ul class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+                <li><a href="#beranda" class="hover:text-emerald-700 transition">Beranda</a></li>
+                <li><a href="#paket" class="hover:text-emerald-700 transition">Paket Umroh</a></li>
+                <li><a href="#keunggulan" class="hover:text-emerald-700 transition">Mengapa Kami</a></li>
+                <li><a href="#jadwal" class="hover:text-emerald-700 transition">Jadwal Keberangkatan</a></li>
+                <li><a href="#testimoni" class="hover:text-emerald-700 transition">Testimoni</a></li>
+                <li><a href="#faq" class="hover:text-emerald-700 transition">FAQ</a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/6281234567890?text=Halo%20Al-Bait%20Travel,%20saya%20ingin%20konsultasi%20paket%20umroh" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-medium px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition duration-200 flex items-center gap-2 border border-emerald-600">
+                    <i class="fab fa-whatsapp text-base text-emerald-300"></i>
+                    <span>Konsultasi Gratis</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="beranda" class="relative bg-islamic-pattern text-white overflow-hidden py-16 lg:py-24">
+        <!-- SVG Backdrop Mosque Silhouette -->
+        <div class="absolute inset-0 z-0 opacity-15 flex items-end justify-center pointer-events-none">
+            <svg class="w-full h-80 text-gold-300 fill-current" viewBox="0 0 1200 300" preserveAspectRatio="none">
+                <path d="M0,300 L0,220 Q150,120 300,220 Q450,80 600,200 Q750,90 900,220 Q1050,130 1200,220 L1200,300 Z"></path>
+                <circle cx="600" cy="90" r="45"></circle>
+                <polygon points="600,25 610,40 625,45 610,50 600,65 590,50 575,45 590,40"></polygon>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-emerald-800/80 border border-gold-500/40 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-medium text-gold-300 shadow-inner">
+                        <i class="fas fa-star text-gold-400"></i>
+                        <span>Penyelenggara Umroh Terpercaya & Sesuai Sunnah</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                        Wujudkan Rindu Ke Tanah Suci Bersama <span class="gold-text italic block mt-1">Al-Bait Travel</span>
+                    </h1>
+
+                    <p class="text-emerald-100 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Rasakan pengalaman ibadah Umroh dan Haji Plus yang khusyuk, aman, dan nyaman. Didampingi pembimbing syariah berpengalaman dengan fasilitas hotel bintang dekat dengan Masjidil Haram & Nabawi.
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                            <i class="fas fa-plane-departure text-gold-400"></i> Penerbangan Direct
+                        </span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                            <i class="fas fa-hotel text-gold-400"></i> Hotel Depan Masjid
+                        </span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-lg backdrop-blur-sm border border-white/10">
+                            <i class="fas fa-user-shield text-gold-400"></i> Pasti Keberangkatannya
+                        </span>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#paket" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-600 hover:to-gold-700 text-emerald-900 font-bold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center text-sm tracking-wide">
+                            <i class="fas fa-kaaba mr-2"></i> Lihat Paket Umroh 2026
+                        </a>
+                        <a href="#simulasi" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-medium px-6 py-3.5 rounded-xl backdrop-blur-sm transition text-center text-sm">
+                            <i class="fas fa-calculator mr-2 text-gold-300"></i> Hitung Estimasi Biaya
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fast Search / Booking Widget Right -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 text-gray-800 shadow-2xl border-2 border-gold-500/30 relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gold-500 text-emerald-900 text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow">
+                            Cari Keberangkatan Cepat
+                        </div>
+
+                        <h3 class="text-xl font-bold font-serif text-emerald-800 mb-2 text-center">Form Cek Kursi Jamaah</h3>
+                        <p class="text-xs text-gray-500 text-center mb-6">Pilih jadwal keberangkatan untuk konsultasi ketersediaan seat.</p>
+
+                        <form id="quickSearchForm" onsubmit="handleQuickSearch(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Pilih Program Umroh</label>
+                                <select id="searchCategory" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-emerald-600 focus:outline-none">
+                                    <option value="All">Semua Kategori Paket</option>
+                                    <option value="Promo">Umroh Hemat / Promo</option>
+                                    <option value="Reguler">Umroh Reguler Bintang 4</option>
+                                    <option value="VIP">Umroh VIP VIP Bintang 5</option>
+                                    <option value="Ramadhan">Umroh Spesial Ramadhan</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Rencana Bulan Keberangkatan</label>
+                                <select id="searchMonth" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-emerald-600 focus:outline-none">
+                                    <option value="All">Semua Bulan (2026)</option>
+                                    <option value="Oktober">Oktober 2026</option>
+                                    <option value="November">November 2026</option>
+                                    <option value="Desember">Desember 2026</option>
+                                    <option value="Januari">Januari 2027</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Jumlah Jamaah</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="number" id="searchPax" min="1" value="1" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-emerald-600 focus:outline-none">
+                                    <span class="text-xs text-gray-500 font-medium">Orang</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm mt-2">
+                                <i class="fas fa-search text-gold-400"></i> Cari & Cek Ketersediaan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Stats Counter Bar -->
+    <section class="bg-white border-b border-gray-200 py-8 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-3">
+                    <div class="text-2xl sm:text-3xl font-bold text-emerald-800 font-serif">12,500+</div>
+                    <div class="text-xs text-gray-500 mt-1">Jamaah Terberangkatkan</div>
+                </div>
+                <div class="p-3 border-l border-gray-100">
+                    <div class="text-2xl sm:text-3xl font-bold text-emerald-800 font-serif">100%</div>
+                    <div class="text-xs text-gray-500 mt-1">Kepastian Keberangkatan</div>
+                </div>
+                <div class="p-3 md:border-l border-gray-100">
+                    <div class="text-2xl sm:text-3xl font-bold text-emerald-800 font-serif">4.9 / 5.0</div>
+                    <div class="text-xs text-gray-500 mt-1">Kepuasan Jamaah (Google)</div>
+                </div>
+                <div class="p-3 border-l border-gray-100">
+                    <div class="text-2xl sm:text-3xl font-bold text-emerald-800 font-serif">12+ Tahun</div>
+                    <div class="text-xs text-gray-500 mt-1">Pengalaman Layanan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section: Package Filter & Cards -->
+    <section id="paket" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-gold-600 font-semibold text-xs tracking-widest uppercase bg-gold-300/20 px-3 py-1 rounded-full">Pilihan Terbaik</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-emerald-800 mt-2">Pilihan Paket Umroh 2026</h2>
+            <p class="text-gray-600 text-sm sm:text-base mt-2">Pilih paket perjalanan ibadah yang sesuai dengan kebutuhan dan kenyamanan Anda keluarga.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl shadow-sm border border-gray-200">
+            <!-- Filter Categories Buttons -->
+            <div class="flex flex-wrap gap-2 w-full sm:w-auto" id="filterCategoryContainer">
+                <button onclick="setFilter('All')" class="filter-btn active bg-emerald-700 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition shadow-sm">Semua Paket</button>
+                <button onclick="setFilter('Promo')" class="filter-btn bg-gray-100 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition">Hemat / Promo</button>
+                <button onclick="setFilter('Reguler')" class="filter-btn bg-gray-100 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition">Reguler (Bintang 4)</button>
+                <button onclick="setFilter('VIP')" class="filter-btn bg-gray-100 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition">VIP (Bintang 5)</button>
+            </div>
+
+            <!-- Month Filter Dropdown -->
+            <div class="w-full sm:w- auto flex items-center gap-2">
+                <span class="text-xs font-semibold text-gray-500 whitespace-nowrap"><i class="fas fa-calendar-alt text-emerald-700"></i> Bulan:</span>
+                <select id="monthFilterSelect" onchange="applyFilters()" class="bg-gray-50 border border-gray-300 rounded-xl px-3 py-1.5 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-700">
+                    <option value="All">Semua Keberangkatan</option>
+                    <option value="Oktober">Oktober 2026</option>
+                    <option value="November">November 2026</option>
+                    <option value="Desember">Desember 2026</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Dynamic Product Cards Grid -->
+        <div id="packageGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic Injection via JavaScript -->
+        </div>
+
+        <!-- Empty Filter State -->
+        <div id="noPackageState" class="hidden text-center py-12 bg-white rounded-2xl border border-dashed border-gray-300">
+            <i class="fas fa-search text-4xl text-gray-300 mb-3"></i>
+            <h4 class="text-base font-semibold text-gray-700">Paket Tidak Ditemukan</h4>
+            <p class="text-xs text-gray-500 mt-1">Cobalah mengganti filter pilihan kategori atau bulan keberangkatan Anda.</p>
+        </div>
+    </section>
+
+    <!-- Feature Section: Why Choose Us -->
+    <section id="keunggulan" class="bg-emerald-800 text-white py-16 sm:py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-300 font-semibold text-xs tracking-widest uppercase bg-emerald-700/80 px-3 py-1 rounded-full border border-gold-500/30">Komitmen Layanan</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Mengapa Memilih Al-Bait Travel?</h2>
+                <p class="text-emerald-100 text-sm sm:text-base mt-2">Prioritas kami adalah kenyamanan dan kekhusyukan ibadah Anda selama di Tanah Suci.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-emerald-700/60 backdrop-blur-md p-6 rounded-2xl border border-gold-500/20 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 bg-gold-500/20 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-gold-500/30">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 text-gold-300">Izin Resmi Kemenag</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Terdaftar resmi di Kementerian Agama RI (PPIU No. U.204/2022) menjamin keamanan legalitas perjalanan Anda.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-emerald-700/60 backdrop-blur-md p-6 rounded-2xl border border-gold-500/20 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 bg-gold-500/20 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-gold-500/30">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 text-gold-300">Pembimbing Syariah</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Didampingi oleh Ustaz / Muthawwif berpengalaman lulusan Universitas Islam Madinah yang ramah dan sabar.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-emerald-700/60 backdrop-blur-md p-6 rounded-2xl border border-gold-500/20 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 bg-gold-500/20 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-gold-500/30">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 text-gold-300">Hotel Dekat Masjid</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Akomodasi berjarak dekat ke Masjidil Haram & Nabawi sehingga memudahkan jamaah melaksanakan shalat berjamaah.</p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="bg-emerald-700/60 backdrop-blur-md p-6 rounded-2xl border border-gold-500/20 hover:border-gold-500/50 transition">
+                    <div class="w-12 h-12 bg-gold-500/20 text-gold-400 rounded-xl flex items-center justify-center text-xl mb-4 border border-gold-500/30">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 text-gold-300">Penerbangan Langsung</h3>
+                    <p class="text-xs text-emerald-100 leading-relaxed">Menggunakan maskapai ternama seperti Saudi Airlines atau Garuda Indonesia (Direct Landing Madinah/Jeddah).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departure Schedule Table Section -->
+    <section id="jadwal" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-gold-600 font-semibold text-xs tracking-widest uppercase bg-gold-300/20 px-3 py-1 rounded-full">Jadwal Keberangkatan</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-emerald-800 mt-2">Keberangkatan Mendatang (2026)</h2>
+            <p class="text-gray-600 text-sm mt-2">Daftarkan diri dan keluarga Anda sebelum kuota seat penerbangan habis.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-emerald-800 text-white font-serif text-xs uppercase tracking-wider">
+                        <tr>
+                            <th class="py-4 px-6">Program / Paket</th>
+                            <th class="py-4 px-6">Tgl Keberangkatan</th>
+                            <th class="py-4 px-6">Durasi</th>
+                            <th class="py-4 px-6">Maskapai</th>
+                            <th class="py-4 px-6">Sisa Kuota</th>
+                            <th class="py-4 px-6 text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-gray-700" id="scheduleTableBody">
+                        <!-- Dynamic via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Price Estimator Section -->
+    <section id="simulasi" class="bg-emerald-50 py-16 border-y border-emerald-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-white p-6 sm:p-10 rounded-3xl shadow-xl border border-gold-500/20">
+                <div class="text-center mb-8">
+                    <span class="text-emerald-700 font-semibold text-xs tracking-widest uppercase">Estimator Cepat</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-emerald-900 mt-1">Simulasi Biaya & Booking Langsung</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm mt-1">Hitung perkiraan total estimasi biaya untuk grup atau keluarga Anda.</p>
+                </div>
+
+                <form id="calcForm" onsubmit="handleCalcSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Nama Lengkap Jamaah Utama</label>
+                            <input type="text" id="calcName" required placeholder="Contoh: Bpk. Ahmad Subagyo" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Nomor WhatsApp Active</label>
+                            <input type="tel" id="calcPhone" required placeholder="08123456789" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Tipe Paket</label>
+                            <select id="calcPackage" onchange="updateCalcTotal()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                                <option value="28500000">Umroh Hemat (Rp 28,5 Juta)</option>
+                                <option value="33500000" selected>Umroh Reguler Bintang 4 (Rp 33,5 Juta)</option>
+                                <option value="42000000">Umroh VIP Bintang 5 (Rp 42,0 Juta)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Tipe Kamar</label>
+                            <select id="calcRoom" onchange="updateCalcTotal()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                                <option value="0">Quad (4 Orang / Kamar) - Standard</option>
+                                <option value="2000000">Triple (3 Orang) + Rp 2 Juta/pax</option>
+                                <option value="4000000">Double (2 Orang) + Rp 4 Juta/pax</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Jumlah Orang</label>
+                            <input type="number" id="calcPax" min="1" value="2" onchange="updateCalcTotal()" onkeyup="updateCalcTotal()" class="w-full bg-gray-50 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-emerald-700 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <!-- Total Estimasi Display Box -->
+                    <div class="bg-emerald-800 text-white p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-gold-500/30">
+                        <div>
+                            <span class="text-xs text-emerald-200 block">Perkiraan Total Investasi Ibadah:</span>
+                            <span id="calcTotalDisplay" class="text-2xl sm:text-3xl font-bold font-serif text-gold-300">Rp 67.000.000</span>
+                        </div>
+                        <button type="submit" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-emerald-950 font-bold px-6 py-3 rounded-xl transition text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md">
+                            <i class="fab fa-whatsapp text-lg"></i> Kirim Konsultasi Ke WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-gold-600 font-semibold text-xs tracking-widest uppercase bg-gold-300/20 px-3 py-1 rounded-full">Kesan & Pesan</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-emerald-800 mt-2">Pengalaman Jamaah Kami</h2>
+            <p class="text-gray-600 text-sm mt-2">Kisah ketenangan ibadah dari mereka yang telah mempercayakan perjalanannya pada Al-Bait Travel.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs space-x-1 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic leading-relaxed mb-6">
+                        "Pelayanan Al-Bait luar biasa ramah. Pembimbing ustaznya sangat sabar membimbing tata cara ibadah sesuai sunnah. Hotel di Makkah benar-benar dekat tinggal jalan kaki sebentar."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                    <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm font-serif">
+                        H
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-800">H. Hendra S. & Keluarga</h4>
+                        <span class="text-[10px] text-gray-400">Jamaah Umroh Reguler Nov 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs space-x-1 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic leading-relaxed mb-6">
+                        "Alhamdulillah keberangkatan tepat waktu tanpa kendala delay. Makanan di hotel ramah selera Indonesia. Sangat direkomendasikan untuk jamaah lansia."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                    <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm font-serif">
+                        S
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-800">Hj. Siti Nurjanah</h4>
+                        <span class="text-[10px] text-gray-400">Jamaah Umroh VIP Des 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex text-amber-400 text-xs space-x-1 mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-xs sm:text-sm italic leading-relaxed mb-6">
+                        "Fasilitas bus selama Ziarah Kota Makkah dan Madinah sangat nyaman dan dingin. Penjelasan muthawwif menambah wawasan sejarah Islam yang mendalam."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+                    <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm font-serif">
+                        A
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-800">dr. Ahmad Fauzi</h4>
+                        <span class="text-[10px] text-gray-400">Jamaah Umroh Promo Jan 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Accordion) -->
+    <section id="faq" class="py-16 max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+            <span class="text-gold-600 font-semibold text-xs tracking-widest uppercase bg-gold-300/20 px-3 py-1 rounded-full">Pertanyaan Umum</span>
+            <h2 class="text-3xl font-serif font-bold text-emerald-800 mt-2">Pertanyaan Yang Sering Diajukan (FAQ)</h2>
+        </div>
+
+        <div class="space-y-4" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:text-emerald-700 text-sm sm:text-base">
+                    <span>Apa saja syarat dokumen pendaftaran Umroh?</span>
+                    <i id="faqIcon-1" class="fas fa-chevron-down text-emerald-700 transition-transform"></i>
+                </button>
+                <div id="faqContent-1" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3 leading-relaxed">
+                    Dokumen yang diperlukan meliputi: Paspor asli (masa berlaku minimal 7 bulan), Pasfoto 4x6 latar putih (4 lembar), Buku Vaksin Meningitis (jika diwajibkan), FC KTP & Kartu Keluarga, serta Buku Nikah (bagi suami istri).
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:text-emerald-700 text-sm sm:text-base">
+                    <span>Apakah biaya paket sudah mencakup visa dan perlengkapan?</span>
+                    <i id="faqIcon-2" class="fas fa-chevron-down text-emerald-700 transition-transform"></i>
+                </button>
+                <div id="faqContent-2" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3 leading-relaxed">
+                    Ya, seluruh paket Al-Bait Travel sudah *all-in* mencakup Visa Umroh, Tiket PP, Hotel, Makan 3x sehari (Buffet Indonesian Food), Handling Bandara, Bus AC, serta Perlengkapan Umroh lengkap (Koper, Kain Ihram/Mukena, Tas Paspor, Seragam Batik).
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+                <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between p-5 text-left font-semibold text-gray-800 hover:text-emerald-700 text-sm sm:text-base">
+                    <span>Bagaimana sistem pembayaran dan pelunasannya?</span>
+                    <i id="faqIcon-3" class="fas fa-chevron-down text-emerald-700 transition-transform"></i>
+                </button>
+                <div id="faqContent-3" class="hidden px-5 pb-5 text-xs sm:text-sm text-gray-600 border-t border-gray-100 pt-3 leading-relaxed">
+                    Pendaftaran cukup dengan Down Payment (DP) sebesar Rp 5.000.000 / seat. Pelunasan biaya dapat dilakukan paling lambat 30 hari sebelum tanggal jadwal keberangkatan.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detail Paket Popup -->
+    <div id="packageModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col">
+            <!-- Close Modal Button -->
+            <button onclick="closePackageModal()" class="absolute top-4 right-4 z-10 w-9 h-9 bg-black/40 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="bg-emerald-800 text-white p-6 border-b border-gold-500/30">
+                <span id="modalCategoryBadge" class="bg-gold-500 text-emerald-950 font-bold text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider"></span>
+                <h3 id="modalTitle" class="text-2xl font-serif font-bold mt-2"></h3>
+                <p id="modalPrice" class="text-gold-300 font-semibold text-lg mt-1"></p>
+            </div>
+
+            <!-- Modal Content (Scrollable) -->
+            <div class="p-6 overflow-y-auto space-y-6 custom-scrollbar text-sm">
+                <!-- Hotel & Airline Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs bg-emerald-50 p-4 rounded-xl">
+                    <div>
+                        <span class="text-gray-500 block">Hotel Makkah:</span>
+                        <strong id="modalHotelMakkah" class="text-emerald-900"></strong>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 block">Hotel Madinah:</span>
+                        <strong id="modalHotelMadinah" class="text-emerald-900"></strong>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <span class="text-gray-500 block">Maskapai:</span>
+                        <strong id="modalAirline" class="text-emerald-900"></strong>
+                    </div>
+                </div>
+
+                <!-- Section Facilities Include/Exclude -->
+                <div>
+                    <h4 class="font-serif font-bold text-emerald-800 text-base mb-2"><i class="fas fa-check-circle text-gold-500 mr-2"></i>Fasilitas Sudah Termasuk:</h4>
+                    <ul id="modalIncludes" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
+                        <!-- Injected via JS -->
+                    </ul>
+                </div>
+
+                <!-- Section Itinerary Timeline -->
+                <div>
+                    <h4 class="font-serif font-bold text-emerald-800 text-base mb-3"><i class="fas fa-route text-gold-500 mr-2"></i>Rencana Perjalanan (Itinerary):</h4>
+                    <div id="modalItinerary" class="space-y-3 border-l-2 border-emerald-600 ml-2 pl-4 text-xs">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer Action -->
+            <div class="bg-gray-50 p-4 border-t border-gray-100 flex justify-between items-center">
+                <button onclick="closePackageModal()" class="px-5 py-2.5 bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium rounded-xl text-xs transition">
+                    Tutup
+                </button>
+                <a id="modalWaLink" href="#" target="_blank" class="px-6 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-xl text-xs shadow-md transition flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-sm text-emerald-300"></i> Amankan Seat Paket Ini
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-emerald-900 text-emerald-100 text-xs pt-16 pb-8 border-t-4 border-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <!-- Brand Info -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-emerald-800 rounded-xl flex items-center justify-center text-gold-400 font-serif text-xl font-bold border border-gold-500/30">
+                        🕌
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-white font-serif">AL-BAIT TRAVEL</span>
+                </div>
+                <p class="text-emerald-200/80 leading-relaxed">
+                    Penyelenggara Resmi Perjalanan Ibadah Umroh dan Haji Plus berizin Kementerian Agama RI. Mengedepankan kepastian jadwal dan kenyamanan ibadah jamaah.
+                </p>
+                <div class="text-gold-300 font-semibold text-[11px] bg-emerald-800/80 p-2.5 rounded-lg border border-gold-500/20">
+                    <i class="fas fa-shield-alt mr-1"></i> PPIU No. U.204 / Year 2022
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div>
+                <h4 class="text-white font-serif text-sm font-bold mb-4 border-b border-emerald-700 pb-2">Tautan Cepat</h4>
+                <ul class="space-y-2.5 text-emerald-200/80">
+                    <li><a href="#beranda" class="hover:text-gold-300 transition">Beranda Utama</a></li>
+                    <li><a href="#paket" class="hover:text-gold-300 transition">Paket Umroh 2026</a></li>
+                    <li><a href="#jadwal" class="hover:text-gold-300 transition">Jadwal Keberangkatan</a></li>
+                    <li><a href="#keunggulan" class="hover:text-gold-300 transition">Keunggulan Layanan</a></li>
+                    <li><a href="#simulasi" class="hover:text-gold-300 transition">Hitung Simulasi DP</a></li>
+                </ul>
+            </div>
+
+            <!-- Paket Pilihan -->
+            <div>
+                <h4 class="text-white font-serif text-sm font-bold mb-4 border-b border-emerald-700 pb-2">Kategori Program</h4>
+                <ul class="space-y-2.5 text-emerald-200/80">
+                    <li><a href="#paket" onclick="setFilter('Promo')" class="hover:text-gold-300 transition">Umroh Hemat Promo</a></li>
+                    <li><a href="#paket" onclick="setFilter('Reguler')" class="hover:text-gold-300 transition">Umroh Reguler Bintang 4</a></li>
+                    <li><a href="#paket" onclick="setFilter('VIP')" class="hover:text-gold-300 transition">Umroh VIP Bintang 5</a></li>
+                    <li><a href="#paket" class="hover:text-gold-300 transition">Umroh Plus Turki / Dubai</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Office -->
+            <div>
+                <h4 class="text-white font-serif text-sm font-bold mb-4 border-b border-emerald-700 pb-2">Kantor Pusat</h4>
+                <ul class="space-y-3 text-emerald-200/80">
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-map-marker-alt text-gold-400 mt-1"></i>
+                        <span>Gedung Al-Bait Tower Lt. 3, Jl. Raya Menara No. 88, Jakarta Selatan</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-phone text-gold-400"></i>
+                        <span>(021) 8899-7766</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-emerald-400"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fas fa-envelope text-gold-400"></i>
+                        <span>info@albait-travel.co.id</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-800 pt-6 text-center text-emerald-300/60 text-[11px]">
+            &copy; 2026 Al-Bait Travel & Umroh. All Rights Reserved. Built for Seamless Umrah Experience.
+        </div>
+    </footer>
+
+    <!-- Application JavaScript -->
+    <script>
+        // Data Store for Umrah Packages
+        const packages = [
+            {
+                id: 1,
+                title: "Umroh Reguler Awal Musim (9 Hari)",
+                category: "Reguler",
+                month: "Oktober",
+                price: 33500000,
+                duration: "9 Hari",
+                hotelMakkah: "Anjum Hotel Makkah (★4)",
+                hotelMadinah: "Grand Plaza Madinah (★4)",
+                airline: "Saudi Airlines (Direct)",
+                seatsLeft: 6,
+                badge: "Terfavorit",
+                includes: ["Tiket PP Maskapai Saudi Airlines", "Visa Umroh & Asuransi Kesehatan", "Hotel Bintang 4 Dekat Masjid", "Makan 3x Sehari Indonesian Food", "Bimbingan Muthawwif Sesuai Sunnah", "Perlengkapan Umroh Eksklusif"],
+                itinerary: [
+                    { day: "Hari 1", title: "Keberangkatan Jakarta - Madinah", desc: "Berkumpul di Bandara Soekarno Hatta, proses check-in dan terbang menuju Madinah." },
+                    { day: "Hari 2-3", title: "Ibadah di Masjid Nabawi & Ziarah Madinah", desc: "Ziarah Raudhah, Makam Rasulullah, Masjid Quba, dan Kebun Kurma." },
+                    { day: "Hari 4", title: "Madinah ke Makkah & Umroh Pertama", desc: "Mengambil Miqat di Bir Ali, menuju Makkah dengan Kereta Cepat Haramain & Pelaksanaan Umroh." },
+                    { day: "Hari 5-7", title: "Ibadah di Masjidil Haram & Ziarah Makkah", desc: "Memperbanyak ibadah di Masjidil Haram, ziarah Jabal Tsur, Arafah, Mina, dan Jabal Nur." },
+                    { day: "Hari 8-9", title: "Tawaf Wada & Kepulangan ke Jakarta", desc: "Pelaksanaan Tawaf Wada, bertolak ke Jeddah, dan penerbangan kembali ke Indonesia." }
+                ]
+            },
+            {
+                id: 2,
+                title: "Umroh VIP Khusyuk Bintang 5 (12 Hari)",
+                category: "VIP",
+                month: "November",
+                price: 42000000,
+                duration: "12 Hari",
+                hotelMakkah: "Pullman Zamzam Tower (★5)",
+                hotelMadinah: "Dar Al Taqwa Madinah (★5)",
+                airline: "Garuda Indonesia (Direct)",
+                seatsLeft: 4,
+                badge: "Super Luxury",
+                includes: ["Tiket PP Garuda Indonesia Direct", "Hotel Bintang 5 Pelataran Masjid", "Visa Umroh VIP Express", "Makan International & Indonesian Buffet", "Kereta Cepat Haramain First Class", "Perlengkapan VIP Full Set"],
+                itinerary: [
+                    { day: "Hari 1", title: "Jakarta ke Jeddah Direct Makkah", desc: "Terbang direct menuju Jeddah, mengambil miqat di pesawat dan langsung menuju Makkah." },
+                    { day: "Hari 2-6", title: "Makkah Al-Mukarramah", desc: "Menginap di Depan Pelataran Masjidil Haram, memperbanyak ibadah sunnah, ziarah Makkah." },
+                    { day: "Hari 7-11", title: "Madinah Al-Munawwarah", desc: "Perjalanan dengan Kereta Cepat Haramain ke Madinah, ziarah Raudhah & Kota Madinah." },
+                    { day: "Hari 12", title: "Kepulangan Madinah - Jakarta", desc: "Penerbangan langsung dari Bandara Madinah ke Jakarta." }
+                ]
+            },
+            {
+                id: 3,
+                title: "Umroh Hemat Backpacker Syari (9 Hari)",
+                category: "Promo",
+                month: "Oktober",
+                price: 28500000,
+                duration: "9 Hari",
+                hotelMakkah: "Olayan Ajyad / Setaraf (★3)",
+                hotelMadinah: "Arkan Manar / Setaraf (★3)",
+                airline: "Oman Air / Lion Air",
+                seatsLeft: 12,
+                badge: "Hemat Best Value",
+                includes: ["Tiket PP Ekonomi Class", "Visa Umroh Resmi", "Hotel Bintang 3 Shuttle Bus", "Makan 3x Sehari Box / Buffet", "Bimbingan Ibadah Muthawwif", "Koper & Tas Paspor"],
+                itinerary: [
+                    { day: "Hari 1-3", title: "Penerbangan & Ziarah Madinah", desc: "Tiba di Madinah, check-in hotel dan memperbanyak ibadah di Masjid Nabawi." },
+                    { day: "Hari 4-7", title: "Pelaksanaan Umroh Makkah", desc: "Miqat Bir Ali, menuju Makkah dan melaksanaan Rangkaian Tawaf & Sa'i." },
+                    { day: "Hari 8-9", title: "Persiapan Kepulangan", desc: "Tawaf wada dan penerbangan kembali ke tanah air." }
+                ]
+            },
+            {
+                id: 4,
+                title: "Umroh Liburan Akhir Tahun (9 Hari)",
+                category: "Reguler",
+                month: "Desember",
+                price: 36000000,
+                duration: "9 Hari",
+                hotelMakkah: "Swissotel Makkah (★5)",
+                hotelMadinah: "Grand Plaza Madinah (★4)",
+                airline: "Saudi Airlines",
+                seatsLeft: 8,
+                badge: "Liburan Keluarga",
+                includes: ["Tiket PP Saudi Airlines", "Hotel Bintang 4/5 Dekat Masjid", "Visa Umroh & Handling", "Ziarah Makkah & Madinah Lengkap", "Muthawwif Pendamping", "Merchandise Spesial"],
+                itinerary: [
+                    { day: "Hari 1-4", title: "Madinah Al Munawwarah", desc: "Penerbangan landing Madinah, ibadah dan ziarah kota bersejarah." },
+                    { day: "Hari 5-8", title: "Makkah Al Mukarramah", desc: "Ibadah Umroh dan iktikaf di Masjidil Haram." },
+                    { day: "Hari 9", title: "Tiba Di Indonesia", desc: "Penerbangan kembali ke Jakarta dengan selamat." }
+                ]
+            }
+        ];
+
+        let activeFilterCategory = 'All';
+
+        // Helper: Format Currency IDR
+        function formatIDR(amount) {
+            return 'Rp ' + amount.toLocaleString('id-ID');
+        }
+
+        // Render Package Cards in Catalog
+        function renderPackages(items) {
+            const grid = document.getElementById('packageGrid');
+            const emptyState = document.getElementById('noPackageState');
+            grid.innerHTML = '';
+
+            if (items.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            items.forEach(pkg => {
+                const cardHtml = `
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col justify-between group">
+                        <!-- Card Header & Badge -->
+                        <div class="relative bg-emerald-800 p-6 text-white overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl"></div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="bg-gold-500 text-emerald-950 font-bold text-[10px] uppercase px-3 py-1 rounded-full shadow">
+                                    ${pkg.badge}
+                                </span>
+                                <span class="text-xs text-emerald-200 bg-emerald-700/80 px-2.5 py-1 rounded-lg border border-emerald-600">
+                                    <i class="fas fa-calendar text-gold-400 mr-1"></i> ${pkg.month} 2026
+                                </span>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl group-hover:text-gold-300 transition leading-snug">
+                                ${pkg.title}
+                            </h3>
+                            <div class="mt-4 flex items-baseline gap-1">
+                                <span class="text-2xl font-bold text-gold-300">${formatIDR(pkg.price)}</span>
+                                <span class="text-xs text-emerald-200 font-light">/ jamaah</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Body Features -->
+                        <div class="p-6 space-y-3 text-xs text-gray-600 flex-grow">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-clock text-emerald-700 w-4"></i>
+                                <span>Durasi: <strong>${pkg.duration}</strong></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-hotel text-emerald-700 w-4"></i>
+                                <span>Hotel Makkah: <strong>${pkg.hotelMakkah}</strong></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-hotel text-emerald-700 w-4"></i>
+                                <span>Hotel Madinah: <strong>${pkg.hotelMadinah}</strong></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-plane text-emerald-700 w-4"></i>
+                                <span>Maskapai: <strong>${pkg.airline}</strong></span>
+                            </div>
+
+                            <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                                <span class="text-[11px] text-amber-600 font-medium">
+                                    <i class="fas fa-fire mr-1"></i> Sisa Saja ${pkg.seatsLeft} Seat Lagi!
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Footer Buttons -->
+                        <div class="p-6 pt-0 grid grid-cols-2 gap-3">
+                            <button onclick="openPackageModal(${pkg.id})" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-1">
+                                <i class="fas fa-info-circle"></i> Detail Paket
+                            </button>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Al-Bait%20Travel,%20saya%20tertarik%20dengan%20${encodeURIComponent(pkg.title)}" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-2.5 rounded-xl transition text-xs flex items-center justify-center gap-1 shadow">
+                                <i class="fab fa-whatsapp"></i> Booking
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHtml;
+            });
+        }
+
+        // Render Schedule Table
+        function renderScheduleTable() {
+            const tbody = document.getElementById('scheduleTableBody');
+            tbody.innerHTML = '';
+
+            packages.forEach(pkg => {
+                const row = `
+                    <tr class="hover:bg-emerald-50/50 transition">
+                        <td class="py-4 px-6 font-semibold text-emerald-900">${pkg.title}</td>
+                        <td class="py-4 px-6">15 ${pkg.month} 2026</td>
+                        <td class="py-4 px-6"><span class="bg-emerald-100 text-emerald-800 px-2 py-1 rounded text-xs">${pkg.duration}</span></td>
+                        <td class="py-4 px-6">${pkg.airline}</td>
+                        <td class="py-4 px-6 font-bold text-amber-600">${pkg.seatsLeft} Seat</td>
+                        <td class="py-4 px-6 text-center">
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20tanya%20keberangkatan%20${encodeURIComponent(pkg.title)}" target="_blank" class="bg-gold-500 hover:bg-gold-600 text-emerald-950 font-bold px-3.5 py-1.5 rounded-lg text-xs transition inline-block">
+                                Daftar Seat
+                            </a>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Filter Logic
+        function setFilter(cat) {
+            activeFilterCategory = cat;
+            const buttons = document.querySelectorAll('#filterCategoryContainer .filter-btn');
+            buttons.forEach(btn => {
+                btn.className = 'filter-btn bg-gray-100 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition';
+            });
+
+            // Highlight active button
+            event.target.className = 'filter-btn active bg-emerald-700 text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition shadow-sm';
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const selectedMonth = document.getElementById('monthFilterSelect').value;
+
+            const filtered = packages.filter(pkg => {
+                const matchCategory = activeFilterCategory === 'All' || pkg.category === activeFilterCategory;
+                const matchMonth = selectedMonth === 'All' || pkg.month === selectedMonth;
+                return matchCategory && matchMonth;
+            });
+
+            renderPackages(filtered);
+        }
+
+        // Quick Search Widget Form Event
+        function handleQuickSearch(e) {
+            e.preventDefault();
+            const cat = document.getElementById('searchCategory').value;
+            const month = document.getElementById('searchMonth').value;
+            const pax = document.getElementById('searchPax').value;
+
+            const text = `Halo Al-Bait Travel, saya mau cek ketersediaan kuota:\n- Program: ${cat}\n- Bulan: ${month}\n- Jumlah Jamaah: ${pax} Orang. Mohon info detailnya.`;
+            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // Estimator Calculation Function
+        function updateCalcTotal() {
+            const basePrice = parseInt(document.getElementById('calcPackage').value);
+            const roomAdd = parseInt(document.getElementById('calcRoom').value);
+            const pax = parseInt(document.getElementById('calcPax').value) || 1;
+
+            const total = (basePrice + roomAdd) * pax;
+            document.getElementById('calcTotalDisplay').innerText = formatIDR(total);
+        }
+
+        function handleCalcSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('calcName').value;
+            const phone = document.getElementById('calcPhone').value;
+            const pax = document.getElementById('calcPax').value;
+            const totalDisplay = document.getElementById('calcTotalDisplay').innerText;
+
+            const text = `Halo Al-Bait Travel, saya ${name} (${phone}) ingin konsultasi estimasi paket Umroh:\n- Jumlah Jamaah: ${pax} Orang\n- Estimasi Total: ${totalDisplay}\nMohon informasi langkah pendaftarannya.`;
+            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // Modal Functionality
+        function openPackageModal(id) {
+            const pkg = packages.find(p => p.id === id);
+            if (!pkg) return;
+
+            document.getElementById('modalCategoryBadge').innerText = pkg.category;
+            document.getElementById('modalTitle').innerText = pkg.title;
+            document.getElementById('modalPrice').innerText = `${formatIDR(pkg.price)} / Jamaah (${pkg.duration})`;
+            document.getElementById('modalHotelMakkah').innerText = pkg.hotelMakkah;
+            document.getElementById('modalHotelMadinah').innerText = pkg.hotelMadinah;
+            document.getElementById('modalAirline').innerText = pkg.airline;
+
+            // Render Includes
+            const includesContainer = document.getElementById('modalIncludes');
+            includesContainer.innerHTML = pkg.includes.map(inc => `<li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-600"></i> ${inc}</li>`).join('');
+
+            // Render Itinerary Timeline
+            const itinContainer = document.getElementById('modalItinerary');
+            itinContainer.innerHTML = pkg.itinerary.map(item => `
+                <div class="relative">
+                    <div class="font-bold text-emerald-800">${item.day}: ${item.title}</div>
+                    <div class="text-gray-500 mt-0.5">${item.desc}</div>
+                </div>
+            `).join('');
+
+            // WA Link setup
+            const waMsg = `Halo Al-Bait Travel, saya tertarik dengan detail ${pkg.title}. Mohon bantu proses pendaftaran seat.`;
+            document.getElementById('modalWaLink').href = `https://wa.me/6281234567890?text=${encodeURIComponent(waMsg)}`;
+
+            document.getElementById('packageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePackageModal() {
+            document.getElementById('packageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(index) {
+            const content = document.getElementById(`faqContent-${index}`);
+            const icon = document.getElementById(`faqIcon-${index}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Initial Load Event Listener
+        window.onload = function() {
+            renderPackages(packages);
+            renderScheduleTable();
+            updateCalcTotal();
+        };
+    </script>
+</body>
+</html>
