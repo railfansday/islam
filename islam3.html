@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peran Malaikat dalam Kehidupan Manusia - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .glassmorphism {
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .dark .card-hover:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #1a472a 0%, #2d8a4e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a472a 0%, #2d8a4e 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #1a472a;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .dark .arabic-text {
+            color: #4ade80;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.08), rgba(45, 138, 78, 0.08));
+            border-right: 4px solid #1a472a;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .dark .ayat-box {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.2), rgba(45, 138, 78, 0.2));
+            border-right-color: #4ade80;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a472a, #2d8a4e);
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .angel-card {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.05), rgba(45, 138, 78, 0.05));
+            border: 2px solid rgba(26, 71, 42, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .angel-card:hover {
+            border-color: #1a472a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .dark .angel-card {
+            border-color: rgba(74, 222, 128, 0.15);
+        }
+        .dark .angel-card:hover {
+            border-color: #4ade80;
+        }
+
+        .angel-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a472a, #2d8a4e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #1a472a, #2d8a4e);
+            border-radius: 5px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a1a2e;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1a472a, #2d8a4e, #4ade80);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .transition-theme {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .prose {
+            color: #374151;
+            line-height: 1.8;
+        }
+        .dark .prose {
+            color: #d1d5db;
+        }
+        .prose strong {
+            color: #1a472a;
+        }
+        .dark .prose strong {
+            color: #4ade80;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.06), rgba(45, 138, 78, 0.06));
+            border-left: 4px solid #2d8a4e;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+        .dark .hadith-box {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.15), rgba(45, 138, 78, 0.15));
+            border-left-color: #4ade80;
+        }
+
+        .role-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: rgba(26, 71, 42, 0.1);
+            color: #1a472a;
+        }
+        .dark .role-badge {
+            background: rgba(74, 222, 128, 0.15);
+            color: #4ade80;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-emerald-600 dark:text-emerald-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition font-medium py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&h=600&fit=crop" alt="Malaikat Background" class="w-full h-full object-cover opacity-20 dark:opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-gray-50/90 dark:from-gray-900/90 dark:to-gray-900/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Aqidah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Peran Malaikat dalam Kehidupan Manusia
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>9 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center">
+                            <i class="fas fa-list-ul text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Pengertian Malaikat
+                            </a>
+                            <a href="#sifat" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Sifat-Sifat Malaikat
+                            </a>
+                            <a href="#nama" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> 10 Malaikat dan Tugasnya
+                            </a>
+                            <a href="#peran" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Peran Malaikat
+                            </a>
+                            <a href="#hikmah" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1 border-b border-gray-200 dark:border-gray-700">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Hikmah Beriman
+                            </a>
+                            <a href="#penutup" class="block hover:text-emerald-600 dark:hover:text-emerald-400 transition py-1">
+                                <i class="fas fa-chevron-left text-emerald-500 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۚ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ
+                                </p>
+                                <p class="text-center text-gray-600 dark:text-gray-400 text-sm italic">
+                                    "Rasul telah beriman kepada Al-Qur'an yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman. Semuanya beriman kepada Allah dan malaikat-malaikat-Nya."<br />
+                                    <span class="font-semibold">QS. Al-Baqarah: 285</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong>Malaikat</strong> adalah makhluk ciptaan Allah yang sangat istimewa. 
+                                    Mereka diciptakan dari cahaya, tidak memiliki hawa nafsu, dan senantiasa 
+                                    taat kepada Allah tanpa pernah membantah. Iman kepada malaikat merupakan 
+                                    salah satu rukun iman yang wajib diyakini oleh setiap muslim.
+                                </p>
+                                <p class="mt-3">
+                                    Keberadaan malaikat merupakan realitas gaib yang harus diimani. Meskipun 
+                                    kita tidak dapat melihat mereka, peran mereka sangat besar dalam kehidupan 
+                                    manusia, dari sebelum kelahiran hingga setelah kematian.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Malaikat -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Malaikat
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-emerald-700 dark:text-emerald-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Kata "malaikat" berasal dari bahasa Arab <strong>مَلَكَ - مَلَائِكَةٌ</strong> 
+                                        yang berarti kekuatan atau utusan. Secara etimologi, malaikat adalah 
+                                        makhluk yang menjadi perantara antara Allah dan manusia.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-emerald-700 dark:text-emerald-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Malaikat adalah <strong>makhluk gaib yang diciptakan Allah dari cahaya (nur)</strong>, 
+                                        memiliki sifat-sifat tertentu, tidak berjenis kelamin, tidak makan dan tidak minum, 
+                                        serta senantiasa taat dan beribadah kepada Allah tanpa pernah maksiat.
+                                    </p>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-700 dark:text-gray-300">
+                                        <i class="fas fa-quote-left text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <strong>Hadits Riwayat Muslim:</strong> "Malaikat diciptakan dari cahaya, 
+                                        jin diciptakan dari api yang menyala-nyala, dan Adam diciptakan dari apa 
+                                        yang telah dijelaskan kepada kalian." 
+                                        <span class="text-xs text-gray-500">(HR. Muslim)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Sifat-Sifat Malaikat -->
+                    <section id="sifat" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">3</span>
+                                Sifat-Sifat Malaikat
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>Para ulama menyebutkan beberapa sifat malaikat yang membedakan mereka dari makhluk lainnya:</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-lightbulb text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Diciptakan dari Cahaya</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Malaikat diciptakan dari nur (cahaya) yang suci dan bersih.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-ghost text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Makhluk Gaib</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Tidak dapat dilihat oleh manusia kecuali dalam bentuk tertentu.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-infinity text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Tidak Berjenis Kelamin</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Tidak laki-laki dan tidak perempuan, tidak menikah dan tidak berketurunan.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-star text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Selalu Taat</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        "Mereka tidak mendurhakai Allah terhadap apa yang diperintahkan-Nya kepada mereka dan selalu mengerjakan apa yang diperintahkan." 
+                                        <span class="text-xs">(QS. At-Tahrim: 6)</span>
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-hand-sparkles text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Memiliki Sayap</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        "Segala puji bagi Allah Pencipta langit dan bumi, yang menjadikan malaikat sebagai utusan-utusan (yang mempunyai) sayap, dua, tiga dan empat." 
+                                        <span class="text-xs">(QS. Fatir: 1)</span>
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-bolt text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Bergerak Cepat</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Malaikat memiliki kecepatan yang luar biasa dalam melaksanakan tugas-tugas mereka.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 10 Malaikat dan Tugasnya -->
+                    <section id="nama" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">4</span>
+                                10 Malaikat dan Tugasnya
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>Berikut adalah 10 malaikat yang wajib diketahui beserta tugas-tugas mereka:</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-crown"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Jibril</h4>
+                                                <span class="role-badge">Malaikat Utama</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Menyampaikan wahyu kepada para nabi dan rasul.
+                                                Jibril adalah malaikat yang paling mulia dan menjadi perantara 
+                                                antara Allah dan para nabi.
+                                            </p>
+                                            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. An-Nahl: 102
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-microscope"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Mikail</h4>
+                                                <span class="role-badge">Malaikat Rezeki</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Mengatur rezeki, menurunkan hujan, 
+                                                dan mengatur urusan alam semesta sesuai dengan kehendak Allah.
+                                            </p>
+                                            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Al-Baqarah: 98
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-trumpet"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Israfil</h4>
+                                                <span class="role-badge">Malaikat Kiamat</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Meniup sangkakala (terompet) pada hari kiamat. 
+                                                Tiupan pertama untuk mematikan semua makhluk, tiupan kedua untuk 
+                                                membangkitkan mereka.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-skull"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Izrail</h4>
+                                                <span class="role-badge">Malaikat Maut</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Mencabut nyawa manusia ketika ajalnya tiba. 
+                                                Izrail dikenal sebagai malaikat maut yang bertugas mencabut roh 
+                                                dari jasad manusia.
+                                            </p>
+                                            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. As-Sajdah: 11
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-pen-fancy"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Raqib & Atid</h4>
+                                                <span class="role-badge">Malaikat Pencatat</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Mencatat semua amal perbuatan manusia. 
+                                                Raqib mencatat amal baik dan Atid mencatat amal buruk. 
+                                                Setiap manusia memiliki dua malaikat ini yang selalu menyertai.
+                                            </p>
+                                            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Qaf: 17-18
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-angel"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Munkar & Nakir</h4>
+                                                <span class="role-badge">Malaikat Kubur</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Menanyai manusia di alam kubur tentang 
+                                                keimanannya. Dua malaikat ini akan datang kepada setiap manusia 
+                                                setelah dikubur untuk menguji imannya.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-cloud-rain"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Malik</h4>
+                                                <span class="role-badge">Penjaga Neraka</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Menjaga pintu-pintu neraka dan mengawasi 
+                                                para penghuni neraka. Malik adalah malaikat yang bertugas di neraka.
+                                            </p>
+                                            <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">
+                                                <i class="fas fa-quote-left mr-1"></i> QS. Az-Zukhruf: 77
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="angel-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="angel-icon">
+                                            <i class="fas fa-door-open"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-2 mb-1">
+                                                <h4 class="font-bold text-lg">Ridwan</h4>
+                                                <span class="role-badge">Penjaga Surga</span>
+                                            </div>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                                <strong>Tugas:</strong> Menjaga pintu-pintu surga dan menyambut 
+                                                orang-orang yang masuk surga dengan penuh kegembiraan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Peran Malaikat -->
+                    <section id="peran" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">5</span>
+                                Peran Malaikat dalam Kehidupan Manusia
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>Malaikat memiliki peran yang sangat besar dan beragam dalam kehidupan manusia, di antaranya:</p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                                    <div class="flex items-start gap-3">
+                                        <span class="section-number flex-shrink-0 mt-1" style="width: 28px; height: 28px; font-size: 0.7rem;">1</span>
+                                        <div>
+                                            <h4 class="font-semibold">Periode Janin (Dalam Kandungan)</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Malaikat ditugaskan untuk meniupkan roh ke dalam janin pada usia 4 bulan, 
+                                                mencatat rezeki, ajal, amal, dan nasibnya.
+                                            </p>
+                                            <div class="mt-2 p-2 bg-white/50 dark:bg-gray-800/50 rounded text-xs text-gray-600 dark:text-gray-400">
+                                                <i class="fas fa-quote-left text-emerald-600 mr-1"></i> 
+                                                Hadits Riwayat Bukhari: "Allah mengutus malaikat ke dalam rahim..."
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                                    <div class="flex items-start gap-3">
+                                        <span class="section-number flex-shrink-0 mt-1" style="width: 28px; height: 28px; font-size: 0.7rem;">2</span>
+                                        <div>
+                                            <h4 class="font-semibold">Masa Hidup di Dunia</h4>
+                                            <ul class="text-sm text-gray-600 dark:text-gray-400 mt-1 space-y-1 list-disc list-inside">
+                                                <li>Mencatat semua amal perbuatan (Raqib & Atid)</li>
+                                                <li>Menjaga dan melindungi manusia dari bahaya</li>
+                                                <li>Mendoakan orang-orang yang beriman</li>
+                                                <li>Membantu dalam peperangan dan pertolongan</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                                    <div class="flex items-start gap-3">
+                                        <span class="section-number flex-shrink-0 mt-1" style="width: 28px; height: 28px; font-size: 0.7rem;">3</span>
+                                        <div>
+                                            <h4 class="font-semibold">Saat Kematian</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Malaikat Izrail mencabut nyawa, malaikat rahmat atau azab 
+                                                menyambut roh, dan malaikat-malaikat lain mempersiapkan 
+                                                perjalanan menuju alam kubur.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                                    <div class="flex items-start gap-3">
+                                        <span class="section-number flex-shrink-0 mt-1" style="width: 28px; height: 28px; font-size: 0.7rem;">4</span>
+                                        <div>
+                                            <h4 class="font-semibold">Di Alam Kubur</h4>
+                                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                                Malaikat Munkar dan Nakir datang untuk menguji iman, 
+                                                memberikan pertanyaan tentang Tuhan, agama, dan nabi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
+                                    <div class="flex items-start gap-3">
+                                        <span class="section-number flex-shrink-0 mt-1" style="width: 28px; height: 28px; font-size: 0.7rem;">5</span>
+                                        <div>
+                                            <h4 class="font-semibold">Hari Kiamat dan Akhirat</h4>
+                                            <ul class="text-sm text-gray-600 dark:text-gray-400 mt-1 space-y-1 list-disc list-inside">
+                                                <li>Israfil meniup sangkakala</li>
+                                                <li>Malaikat menghitung amal perbuatan</li>
+                                                <li>Malik menjaga neraka dan Ridwan menjaga surga</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Hikmah Beriman kepada Malaikat -->
+                    <section id="hikmah" class="mt-8">
+                        <div class="bg-white dark:bg-gray-800/50 rounded-2xl p-6 md:p-8 shadow-lg card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="section-number mr-3">6</span>
+                                Hikmah Beriman kepada Malaikat
+                            </h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-shield-halved text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Meningkatkan Ketaatan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Menyadari bahwa malaikat selalu mengawasi dan mencatat amal, 
+                                        mendorong kita untuk senantiasa berbuat baik dan menjauhi maksiat.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-heart text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Mendekatkan Diri kepada Allah</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Mengetahui bahwa malaikat adalah makhluk mulia yang senantiasa 
+                                        beribadah kepada Allah membuat kita semakin mencintai dan mendekatkan diri kepada-Nya.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-hand-peace text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Rasa Aman dan Perlindungan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Meyakini bahwa malaikat senantiasa menjaga dan melindungi orang-orang 
+                                        beriman memberikan ketenangan dan rasa aman dalam hati.
+                                    </p>
+                                </div>
+                                <div class="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl card-hover">
+                                    <div class="flex items-center mb-2">
+                                        <i class="fas fa-brain text-emerald-600 dark:text-emerald-400 mr-2"></i>
+                                        <h4 class="font-semibold">Memperkuat Keyakinan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Iman kepada yang gaib (malaikat) melatih kita untuk percaya pada 
+                                        hal-hal yang tidak terlihat, menguatkan keyakinan dan keimanan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-emerald-200 dark:border-emerald-800">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-emerald-800 dark:text-emerald-300">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Malaikat adalah makhluk mulia yang diciptakan Allah untuk melaksanakan 
+                                    tugas-tugas tertentu dalam mengatur alam semesta dan kehidupan manusia. 
+                                    Iman kepada malaikat merupakan bagian dari rukun iman yang wajib diyakini 
+                                    oleh setiap muslim.
+                                </p>
+                                <p class="mt-3">
+                                    Dengan beriman kepada malaikat, kita menyadari bahwa kita selalu diawasi 
+                                    dan dicatat amalnya. Hal ini mendorong kita untuk senantiasa berbuat baik, 
+                                    menjauhi maksiat, dan meningkatkan ketaatan kepada Allah SWT.
+                                </p>
+                                <p class="mt-3 font-semibold text-emerald-700 dark:text-emerald-300">
+                                    "Ya Allah, kami beriman kepada malaikat-Mu, para utusan-Mu yang mulia. 
+                                    Jadikanlah kami termasuk orang-orang yang dicintai oleh malaikat dan 
+                                    dilindungi oleh mereka."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl text-center">
+                                <p class="text-sm text-gray-600 dark:text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-emerald-600"></i>
+                                    <strong>Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg text-center text-sm">
+                                <p class="text-gray-600 dark:text-gray-400">
+                                    <strong>Referensi:</strong> Al-Qur'an dan Terjemahannya, Shahih Bukhari & Muslim, 
+                                    Kitab Al-Iman karya Ibnu Taimiyah, Tafsir Ibnu Katsir
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-700 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-600 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/10 hover:bg-gray-500/20 text-gray-600 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg transition">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                const isDark = document.documentElement.classList.contains('dark');
+                themeIcon.className = isDark ? 'fas fa-sun text-xl' : 'fas fa-moon text-xl';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fas fa-sun text-xl';
+            }
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Peran Malaikat dalam Kehidupan Manusia';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
