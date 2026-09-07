@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konsep Tauhid Rububiyah, Uluhiyah, dan Asma wa Sifat - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #5bc0eb;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.08), rgba(58, 123, 213, 0.08));
+            border-right: 4px solid #3a7bd5;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* Tauhid Cards */
+        .tauhid-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(58, 123, 213, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .tauhid-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .tauhid-card:hover::before {
+            opacity: 1;
+        }
+        .tauhid-card:hover {
+            border-color: rgba(58, 123, 213, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(58, 123, 213, 0.05);
+        }
+
+        .tauhid-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(58, 123, 213, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5bc0eb;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tauhid-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            border-radius: 5px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5, #5bc0eb);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .prose {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+        .prose strong {
+            color: #5bc0eb;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: rgba(0, 210, 255, 0.05);
+            border-left: 4px solid #3a7bd5;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+
+        .asma-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(58, 123, 213, 0.08);
+            border-radius: 10px;
+            padding: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .asma-card:hover {
+            border-color: rgba(58, 123, 213, 0.3);
+            background: rgba(58, 123, 213, 0.05);
+            transform: scale(1.05);
+        }
+
+        .asma-arabic {
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+            font-size: 1.2rem;
+            color: #5bc0eb;
+        }
+
+        .bg-dark-custom {
+            background-color: #0a0a0a;
+        }
+
+        .text-blue-light {
+            color: #5bc0eb;
+        }
+    </style>
+</head>
+<body class="bg-dark-custom text-white transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-blue-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-blue-400 transition font-medium text-white">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-blue-400 transition font-medium text-white">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-blue-400 transition font-medium text-white">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl text-white"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-blue-400 transition font-medium text-white py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-blue-400 transition font-medium text-white py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-blue-400 transition font-medium text-white py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&h=600&fit=crop" alt="Tauhid Background" class="w-full h-full object-cover opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-dark-custom/90 to-dark-custom/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Aqidah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Konsep Tauhid Rububiyah, Uluhiyah, dan Asma wa Sifat
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>11 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center text-white">
+                            <i class="fas fa-list-ul text-blue-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-blue-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-blue-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Pengertian Tauhid
+                            </a>
+                            <a href="#rububiyah" class="block hover:text-blue-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Tauhid Rububiyah
+                            </a>
+                            <a href="#uluhiyah" class="block hover:text-blue-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Tauhid Uluhiyah
+                            </a>
+                            <a href="#asma-wa-sifat" class="block hover:text-blue-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Tauhid Asma wa Sifat
+                            </a>
+                            <a href="#penutup" class="block hover:text-blue-400 transition py-1 text-white">
+                                <i class="fas fa-chevron-left text-blue-400 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    قُلْ هُوَ اللَّهُ أَحَدٌ
+                                </p>
+                                <p class="text-center text-gray-300 text-sm italic">
+                                    "Katakanlah: Dialah Allah, Yang Maha Esa."<br />
+                                    <span class="font-semibold text-blue-400">QS. Al-Ikhlas: 1</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong class="text-blue-400">Tauhid</strong> adalah inti dan fondasi utama dalam 
+                                    ajaran Islam. Tauhid berarti mengesakan Allah dalam segala aspek, baik dalam 
+                                    rububiyah (kekuasaan), uluhiyah (ibadah), maupun asma wa sifat (nama dan sifat)-Nya.
+                                </p>
+                                <p class="mt-3">
+                                    Para ulama membagi tauhid menjadi tiga tingkatan yang saling terkait dan 
+                                    tidak dapat dipisahkan. Memahami ketiga konsep ini dengan benar akan 
+                                    mengantarkan seorang muslim pada keimanan yang sempurna dan terhindar 
+                                    dari berbagai bentuk kemusyrikan.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Tauhid -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Tauhid
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-blue-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Kata "tauhid" berasal dari bahasa Arab <strong class="text-blue-400">وَحَّدَ - يُوَحِّدُ - تَوْحِيْدًا</strong> 
+                                        yang berarti mengesakan atau menjadikan sesuatu sebagai satu.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-blue-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Tauhid adalah <strong class="text-blue-400">mengakui dengan keyakinan yang mantap</strong> 
+                                        bahwa Allah SWT adalah satu-satunya Tuhan yang berhak disembah, 
+                                        tidak ada sekutu bagi-Nya dalam rububiyah, uluhiyah, dan asma wa sifat-Nya.
+                                    </p>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-300">
+                                        <i class="fas fa-quote-left text-blue-400 mr-2"></i>
+                                        <strong>Imam Abu Manshur Al-Maturidi:</strong> "Tauhid adalah keyakinan bahwa 
+                                        Allah itu Esa, tidak ada sekutu bagi-Nya, tidak ada yang menyerupai-Nya, 
+                                        dan tidak ada yang setara dengan-Nya."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tauhid Rububiyah -->
+                    <section id="rububiyah" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">3</span>
+                                Tauhid Rububiyah
+                            </h2>
+
+                            <div class="tauhid-card">
+                                <div class="flex items-start gap-4">
+                                    <div class="tauhid-icon">
+                                        <i class="fas fa-crown"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="tauhid-number">1</span>
+                                            <h4 class="font-bold text-lg text-blue-400">Pengertian</h4>
+                                        </div>
+                                        <p class="text-sm text-gray-300">
+                                            Tauhid rububiyah adalah <strong class="text-blue-400">meyakini bahwa Allah adalah satu-satunya 
+                                            Pencipta, Pemilik, dan Pengatur seluruh alam semesta</strong>. Hanya Allah yang 
+                                            menciptakan, menghidupkan, mematikan, memberi rezeki, dan mengatur 
+                                            segala urusan makhluk-Nya.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Dalil Al-Qur'an</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Segala puji bagi Allah, Tuhan seluruh alam."<br />
+                                            <span class="text-xs text-blue-400">(QS. Al-Fatihah: 2)</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Allah-lah yang menciptakan kamu, kemudian memberimu rezeki."<br />
+                                            <span class="text-xs text-blue-400">(QS. Ar-Rum: 40)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Contoh dalam Kehidupan</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li><i class="fas fa-cloud-rain text-blue-400 mr-2"></i> Meyakini hanya Allah yang menurunkan hujan</li>
+                                        <li><i class="fas fa-utensils text-blue-400 mr-2"></i> Meyakini hanya Allah yang memberi rezeki</li>
+                                        <li><i class="fas fa-heartbeat text-blue-400 mr-2"></i> Meyakini hanya Allah yang menyembuhkan penyakit</li>
+                                        <li><i class="fas fa-seedling text-blue-400 mr-2"></i> Meyakini hanya Allah yang menumbuhkan tanaman</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                                <p class="text-sm text-blue-400">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    <strong>Catatan:</strong> Tauhid rububiyah diakui oleh semua manusia, bahkan 
+                                    orang musyrik sekalipun. Namun, pengakuan ini belum cukup tanpa diikuti 
+                                    dengan tauhid uluhiyah.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tauhid Uluhiyah -->
+                    <section id="uluhiyah" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">4</span>
+                                Tauhid Uluhiyah
+                            </h2>
+
+                            <div class="tauhid-card">
+                                <div class="flex items-start gap-4">
+                                    <div class="tauhid-icon">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="tauhid-number">2</span>
+                                            <h4 class="font-bold text-lg text-blue-400">Pengertian</h4>
+                                        </div>
+                                        <p class="text-sm text-gray-300">
+                                            Tauhid uluhiyah adalah <strong class="text-blue-400">mengesakan Allah dalam segala bentuk ibadah</strong>. 
+                                            Artinya, seorang muslim hanya beribadah kepada Allah semata dan 
+                                            tidak menyekutukan-Nya dengan apapun. Ini adalah inti dari tauhid 
+                                            yang dibawa oleh semua rasul.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Dalil Al-Qur'an</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Dan tidaklah mereka diperintahkan kecuali untuk beribadah kepada Allah 
+                                            dengan mengikhlaskan ketaatan kepada-Nya."<br />
+                                            <span class="text-xs text-blue-400">(QS. Al-Bayyinah: 5)</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Katakanlah: Sesungguhnya shalatku, ibadahku, hidupku dan matiku 
+                                            hanyalah untuk Allah."<br />
+                                            <span class="text-xs text-blue-400">(QS. Al-An'am: 162)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Contoh dalam Kehidupan</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li><i class="fas fa-pray text-blue-400 mr-2"></i> Hanya berdoa kepada Allah</li>
+                                        <li><i class="fas fa-hand-holding-heart text-blue-400 mr-2"></i> Hanya meminta pertolongan kepada Allah</li>
+                                        <li><i class="fas fa-utensils text-blue-400 mr-2"></i> Hanya bernazar dan menyembelih kurban untuk Allah</li>
+                                        <li><i class="fas fa-heart text-blue-400 mr-2"></i> Hanya mencintai dan membenci karena Allah</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                                <p class="text-sm text-blue-400">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>Peringatan:</strong> Tauhid uluhiyah inilah yang menjadi inti dakwah 
+                                    para rasul dan menjadi pembeda antara muslim dan musyrik.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tauhid Asma wa Sifat -->
+                    <section id="asma-wa-sifat" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">5</span>
+                                Tauhid Asma wa Sifat
+                            </h2>
+
+                            <div class="tauhid-card">
+                                <div class="flex items-start gap-4">
+                                    <div class="tauhid-icon">
+                                        <i class="fas fa-address-card"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="tauhid-number">3</span>
+                                            <h4 class="font-bold text-lg text-blue-400">Pengertian</h4>
+                                        </div>
+                                        <p class="text-sm text-gray-300">
+                                            Tauhid asma wa sifat adalah <strong class="text-blue-400">meyakini seluruh nama dan sifat Allah</strong> 
+                                            yang disebutkan dalam Al-Qur'an dan Hadits, tanpa menyerupakan-Nya 
+                                            dengan makhluk, tanpa mengubah maknanya, dan tanpa menolaknya.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Dalil Al-Qur'an</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Allah memiliki nama-nama yang terbaik (Asmaul Husna), maka 
+                                            bermohonlah kepada-Nya dengan menyebut nama-nama itu."<br />
+                                            <span class="text-xs text-blue-400">(QS. Al-A'raf: 180)</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-quote-left text-blue-400 mr-1"></i>
+                                            "Tidak ada sesuatu pun yang serupa dengan Dia, dan Dia Maha 
+                                            Mendengar lagi Maha Melihat."<br />
+                                            <span class="text-xs text-blue-400">(QS. Asy-Syura: 11)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                                    <h5 class="font-semibold text-blue-400 mb-2">Kaedah Ahlussunnah</h5>
+                                    <ul class="text-sm text-gray-300 space-y-2">
+                                        <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Itsbat (menetapkan) tanpa tahrif (mengubah)</li>
+                                        <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Itsbat tanpa tamyil (menyerupakan)</li>
+                                        <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Itsbat tanpa ta'thil (menolak)</li>
+                                        <li><i class="fas fa-check-circle text-blue-400 mr-2"></i> Itsbat tanpa takyif (menanyakan bentuk)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Asmaul Husna Grid -->
+                            <div class="mt-4">
+                                <h5 class="font-semibold text-blue-400 mb-3 text-center">10 dari 99 Asmaul Husna</h5>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الرَّحْمَٰنُ</p>
+                                        <p class="text-xs text-gray-400">Ar-Rahman</p>
+                                        <p class="text-[10px] text-gray-500">Maha Pengasih</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الرَّحِيمُ</p>
+                                        <p class="text-xs text-gray-400">Ar-Rahim</p>
+                                        <p class="text-[10px] text-gray-500">Maha Penyayang</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْمَلِكُ</p>
+                                        <p class="text-xs text-gray-400">Al-Malik</p>
+                                        <p class="text-[10px] text-gray-500">Maha Merajai</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْقُدُّوسُ</p>
+                                        <p class="text-xs text-gray-400">Al-Quddus</p>
+                                        <p class="text-[10px] text-gray-500">Maha Suci</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">السَّلَامُ</p>
+                                        <p class="text-xs text-gray-400">As-Salam</p>
+                                        <p class="text-[10px] text-gray-500">Maha Memberi Kesejahteraan</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْمُؤْمِنُ</p>
+                                        <p class="text-xs text-gray-400">Al-Mu'min</p>
+                                        <p class="text-[10px] text-gray-500">Maha Memelihara Keamanan</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْمُهَيْمِنُ</p>
+                                        <p class="text-xs text-gray-400">Al-Muhaymin</p>
+                                        <p class="text-[10px] text-gray-500">Maha Memelihara</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْعَزِيزُ</p>
+                                        <p class="text-xs text-gray-400">Al-Aziz</p>
+                                        <p class="text-[10px] text-gray-500">Maha Perkasa</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْجَبَّارُ</p>
+                                        <p class="text-xs text-gray-400">Al-Jabbar</p>
+                                        <p class="text-[10px] text-gray-500">Maha Memaksa</p>
+                                    </div>
+                                    <div class="asma-card">
+                                        <p class="asma-arabic">الْمُتَكَبِّرُ</p>
+                                        <p class="text-xs text-gray-400">Al-Mutakabbir</p>
+                                        <p class="text-[10px] text-gray-500">Maha Megah</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-blue-500/5 to-blue-500/10 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-blue-500/20">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-blue-400">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Tauhid adalah <strong class="text-blue-400">landasan utama</strong> dalam agama Islam. 
+                                    Ketiga konsep tauhid - rububiyah, uluhiyah, dan asma wa sifat - saling 
+                                    terkait dan tidak dapat dipisahkan.
+                                </p>
+                                <p class="mt-3">
+                                    Memahami dan mengamalkan tauhid dengan benar adalah 
+                                    <strong class="text-blue-400">kunci kebahagiaan dunia dan akhirat</strong>. 
+                                    Seorang muslim harus senantiasa menjaga kemurnian tauhidnya dari 
+                                    segala bentuk syirik, baik yang kecil maupun yang besar.
+                                </p>
+                                <p class="mt-3 font-semibold text-blue-400">
+                                    "Ya Allah, tetapkanlah hati kami di atas tauhid-Mu, janganlah Engkau 
+                                    sesatkan kami setelah Engkau memberi petunjuk, dan limpahkanlah kepada 
+                                    kami rahmat dari sisi-Mu."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/5 rounded-xl text-center">
+                                <p class="text-sm text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-blue-400"></i>
+                                    <strong class="text-white">Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-blue-500/10 rounded-lg text-center text-sm">
+                                <p class="text-gray-400">
+                                    <strong class="text-blue-400">Referensi:</strong> Al-Qur'an dan Terjemahannya, 
+                                    Kitabut Tauhid, Tafsir Ibnu Katsir, Al-Aqidah Al-Wasithiyah
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium text-white">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-500 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/20 hover:bg-green-500/30 text-green-400 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/20 hover:bg-gray-500/30 text-gray-400 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-dark-custom rounded-lg hover:shadow-lg transition font-semibold">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-white/10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-blue-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode (always dark)
+            document.documentElement.classList.add('dark');
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            themeIcon.className = 'fas fa-sun text-xl text-white';
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    if (themeIcon.classList.contains('fa-sun')) {
+                        themeIcon.className = 'fas fa-moon text-xl text-white';
+                    } else {
+                        themeIcon.className = 'fas fa-sun text-xl text-white';
+                    }
+                });
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Konsep Tauhid Rububiyah, Uluhiyah, dan Asma wa Sifat';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
