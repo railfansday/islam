@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kedudukan Sabar dan Syukur dalam Menghadapi Ujian Hidup - IslamWeb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0a0a0a',
+                        darkcard: '#121212',
+                        darkborder: '#262626'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .glassmorphism {
+            background: rgba(18, 18, 18, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #4ade80;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(22, 101, 52, 0.25), rgba(21, 128, 61, 0.15));
+            border-right: 4px solid #4ade80;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #166534, #15803d);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #15803d, #4ade80);
+            border-radius: 5px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #15803d, #22c55e, #4ade80);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .prose {
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+        .prose strong {
+            color: #4ade80;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-darkbg text-gray-100 min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-2xl">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-emerald-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-emerald-400 transition font-medium">Pendahuluan</a>
+                    <a href="#sabar" class="hover:text-emerald-400 transition font-medium">Hakikat Sabar</a>
+                    <a href="#syukur" class="hover:text-emerald-400 transition font-medium">Hakikat Syukur</a>
+                    <a href="#keterkaitan" class="hover:text-emerald-400 transition font-medium">Dua Sayap Sayap</a>
+                    <a href="#penutup" class="hover:text-emerald-400 transition font-medium">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-neutral-800 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl text-gray-200"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-neutral-800">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-emerald-400 transition font-medium py-2">Pendahuluan</a>
+                    <a href="#sabar" class="hover:text-emerald-400 transition font-medium py-2">Hakikat Sabar</a>
+                    <a href="#syukur" class="hover:text-emerald-400 transition font-medium py-2">Hakikat Syukur</a>
+                    <a href="#keterkaitan" class="hover:text-emerald-400 transition font-medium py-2">Dua Sayap Mukmin</a>
+                    <a href="#penutup" class="hover:text-emerald-400 transition font-medium py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[50vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1509021436468-d5103974d0d2?w=1200&h=600&fit=crop" alt="Sabar dan Syukur Background" class="w-full h-full object-cover opacity-15" />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-darkbg/90 to-darkbg"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/50 text-emerald-300 text-sm font-semibold mb-6">
+                        <i class="fas fa-balance-scale text-emerald-400 mr-2"></i>
+                        Penyegaran Iman & Motivasi
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6 gradient-text">
+                        Kedudukan Sabar dan Syukur dalam Menghadapi Ujian Hidup
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+                        <span><i class="fas fa-user mr-2 text-emerald-400"></i>Tim Redaksi IslamWeb</span>
+                        <span><i class="fas fa-calendar mr-2 text-emerald-400"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2 text-emerald-400"></i>5 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar - Table of Contents -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover border border-neutral-800">
+                        <h3 class="text-lg font-bold mb-4 flex items-center text-white">
+                            <i class="fas fa-list-ul text-emerald-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-emerald-400 transition py-1 border-b border-neutral-800 text-gray-300">
+                                <i class="fas fa-chevron-right text-emerald-500 mr-2 text-xs"></i>
+                                1. Pendahuluan
+                            </a>
+                            <a href="#sabar" class="block hover:text-emerald-400 transition py-1 border-b border-neutral-800 text-gray-300">
+                                <i class="fas fa-chevron-right text-emerald-500 mr-2 text-xs"></i>
+                                2. Hakikat Sabar
+                            </a>
+                            <a href="#syukur" class="block hover:text-emerald-400 transition py-1 border-b border-neutral-800 text-gray-300">
+                                <i class="fas fa-chevron-right text-emerald-500 mr-2 text-xs"></i>
+                                3. Hakikat Syukur
+                            </a>
+                            <a href="#keterkaitan" class="block hover:text-emerald-400 transition py-1 border-b border-neutral-800 text-gray-300">
+                                <i class="fas fa-chevron-right text-emerald-500 mr-2 text-xs"></i>
+                                4. Dua Sayap Orang Beriman
+                            </a>
+                            <a href="#penutup" class="block hover:text-emerald-400 transition py-1 text-gray-300">
+                                <i class="fas fa-chevron-right text-emerald-500 mr-2 text-xs"></i>
+                                5. Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4 space-y-8">
+                    <!-- 1. Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-darkcard rounded-2xl p-6 md:p-8 shadow-xl border border-darkborder card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    عَجَبًا لأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ وَلَيْسَ ذَاكَ لأَحَدٍ إِلاَّ لِلْمُؤْمِنِ إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ
+                                </p>
+                                <p class="text-center text-gray-400 text-sm italic">
+                                    "Sungguh menakjubkan urusan seorang mukmin, seluruh urusannya adalah baik baginya... Jika ia mendapatkan kesenangan ia bersyukur, maka itu baik baginya. Dan jika ia tertimpa kesulitan ia bersabar, maka itu pun baik baginya."<br />
+                                    <span class="font-semibold text-emerald-400">HR. Muslim</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    Kehidupan di dunia tak pernah lepas dari dinamika suka dan duka. Allah SWT mempergilirkan hari-hari manusia antara kelapangan dan kesempitan sebagai sarana untuk menguji kualitas iman.
+                                </p>
+                                <p class="mt-3">
+                                    Dalam menghadapi setiap pasang surut takdir tersebut, Islam memberikan dua pilar utama sebagai penopang jiwa seorang hamba: <strong>sabar</strong> dan <strong>syukur</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 2. Hakikat Sabar -->
+                    <section id="sabar">
+                        <div class="bg-darkcard rounded-2xl p-6 md:p-8 shadow-lg border border-darkborder card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">2</span>
+                                Hakikat Sabar dalam Pandangan Islam
+                            </h2>
+
+                            <div class="prose mb-6">
+                                <p>
+                                    Sabar bukan sekadar pasrah tanpa usaha, melainkan kemampuan menahan diri dari rasa keluh kesah, menjaga lisan dari ucapan yang murka, serta mengendalikan anggota tubuh dari perbuatan yang dibenci Allah.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="p-4 bg-neutral-900/80 rounded-xl border border-emerald-900/50">
+                                    <div class="flex items-center space-x-2 text-emerald-400 font-bold mb-2">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                        <span>Sabar dalam Taat</span>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Konsisten menjalankan perintah Allah meski terasa berat atau membutuhkan pengorbanan.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-neutral-900/80 rounded-xl border border-emerald-900/50">
+                                    <div class="flex items-center space-x-2 text-emerald-400 font-bold mb-2">
+                                        <i class="fas fa-shield-halved"></i>
+                                        <span>Sabar atas Maksiat</span>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Menahan hawa nafsu dan membentengi diri dari segala bentuk larangan Allah SWT.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-neutral-900/80 rounded-xl border border-emerald-900/50">
+                                    <div class="flex items-center space-x-2 text-emerald-400 font-bold mb-2">
+                                        <i class="fas fa-cloud-rain"></i>
+                                        <span>Sabar atas Takdir</span>
+                                    </div>
+                                    <p class="text-sm text-gray-300">
+                                        Ridha dan tidak berburuk sangka kepada Allah saat ditimpa musibah atau cobaan hidup.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 3. Hakikat Syukur -->
+                    <section id="syukur">
+                        <div class="bg-darkcard rounded-2xl p-6 md:p-8 shadow-lg border border-darkborder card-hover">
+                            <h2 class="text-2xl font-bold mb-6 flex items-center text-white">
+                                <span class="section-number mr-3">3</span>
+                                Hakikat Syukur dan Tiga Pilar Utamanya
+                            </h2>
+
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold border border-emerald-800">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="prose">
+                                        <h3 class="text-lg font-bold text-white mb-1">Syukur dengan Hati</h3>
+                                        <p>
+                                            Meyakini dan mengakui secara penuh bahwa seluruh kenikmatan yang diterima merupakan karunia murni dari Allah SWT, bukan semata karena kehebatan diri.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold border border-emerald-800">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </div>
+                                    <div class="prose">
+                                        <h3 class="text-lg font-bold text-white mb-1">Syukur dengan Lisan</h3>
+                                        <p>
+                                            Memperbanyak puji-pujian kepada Allah (seperti mengucapkan <em>Alhamdulillah</em>) serta menceritakan nikmat dalam rangka kebaikan (<em>tahadduts bin ni'mah</em>).
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-4">
+                                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-950 text-emerald-400 flex items-center justify-center font-bold border border-emerald-800">
+                                        <i class="fas fa-hands"></i>
+                                    </div>
+                                    <div class="prose">
+                                        <h3 class="text-lg font-bold text-white mb-1">Syukur dengan Anggota Tubuh</h3>
+                                        <p>
+                                            Menggunakan seluruh potensi fisik, harta, dan nikmat yang diberikan untuk hal-hal yang diridhai oleh Allah SWT.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 4. Dua Sayap Orang Beriman -->
+                    <section id="keterkaitan">
+                        <div class="bg-darkcard rounded-2xl p-6 md:p-8 shadow-lg border border-darkborder card-hover">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">4</span>
+                                Keterkaitan Sabar & Syukur: Dua Sayap Mukmin
+                            </h2>
+
+                            <div class="prose mb-4">
+                                <p>
+                                    Para ulama mengibaratkan iman seperti seekor burung: <strong>satu sayapnya adalah sabar</strong> dan <strong>sayap lainnya adalah syukur</strong>. Burung tidak akan mampu terbang tinggi menuju ridha Allah jika salah satu sayapnya patah.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-neutral-900/60 rounded-xl border-l-4 border-emerald-500">
+                                    <h4 class="font-bold text-emerald-400 mb-1">Penjaga Keseimbangan Hati</h4>
+                                    <p class="text-sm text-gray-300">Sabar mencegah seseorang dari keputusasaan saat diuji dengan kesulitan, sementara syukur mencegah dari kesombongan saat diuji dengan kelapangan.</p>
+                                </div>
+                                <div class="p-4 bg-neutral-900/60 rounded-xl border-l-4 border-emerald-500">
+                                    <h4 class="font-bold text-emerald-400 mb-1">Pintu Ketenangan Jiwa</h4>
+                                    <p class="text-sm text-gray-300">Pribadi yang memadukan sabar dan syukur akan selalu merasa lapang dada karena meyakini takdir Allah senantiasa membawa hikmah.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 5. Penutup -->
+                    <section id="penutup" class="fade-in">
+                        <div class="bg-gradient-to-br from-emerald-950/80 to-neutral-900 rounded-2xl p-6 md:p-8 shadow-xl border border-emerald-900/50">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-emerald-300">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Semoga Allah SWT melimpahkan pertolongan-Nya agar kita senantiasa menjadi hamba yang bersabar atas segala ketetapan-Nya dan bersyukur atas segala limpahan nikmat-Nya.
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-black/40 rounded-xl text-center border border-emerald-900/30">
+                                <p class="text-sm text-gray-300">
+                                    <i class="fas fa-book-open mr-2 text-emerald-400"></i>
+                                    <strong>Wallahu a'lam bish-shawab.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium text-gray-300">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-500 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 text-green-400 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/10 hover:bg-gray-500/20 text-gray-300 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg transition">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-neutral-800">
+        <div class="container mx-auto px-4 py-8">
+            <div class="border-t border-neutral-800 pt-4 text-center text-sm text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Reading Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll offset
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Article Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Kedudukan Sabar dan Syukur dalam Menghadapi Ujian Hidup';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link artikel berhasil disalin!');
+                        }).catch(() => {
+                            alert('Gagal menyalin link.');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+        })();
+    </script>
+</body>
+</html>
