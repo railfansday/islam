@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Lengkap Tata Cara Wudhu yang Sah - Artikel Islam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+        }
+
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: #00cec9;
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+        }
+
+        .ayat-box {
+            background: linear-gradient(135deg, rgba(0, 184, 148, 0.08), rgba(0, 206, 201, 0.08));
+            border-right: 4px solid #00b894;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        /* Step Cards */
+        .step-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 206, 201, 0.15);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00b894, #00cec9);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .step-card:hover::before {
+            opacity: 1;
+        }
+        .step-card:hover {
+            border-color: rgba(0, 206, 201, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 206, 201, 0.05);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #0a0a0a;
+            font-weight: bold;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 184, 148, 0.15), rgba(0, 206, 201, 0.15));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00cec9;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 5px;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00b894, #00cec9, #00b894);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        .toc-sticky {
+            position: sticky;
+            top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .toc-sticky {
+                position: relative;
+                top: 0;
+            }
+            .arabic-text {
+                font-size: 1.2rem;
+                line-height: 2rem;
+            }
+        }
+
+        .prose {
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+        .prose strong {
+            color: #00cec9;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        .prose li {
+            margin-bottom: 0.25rem;
+        }
+
+        .hadith-box {
+            background: rgba(0, 206, 201, 0.05);
+            border-left: 4px solid #00b894;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem;
+        }
+
+        .doa-box {
+            background: rgba(0, 206, 201, 0.05);
+            border: 1px solid rgba(0, 206, 201, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .doa-arabic {
+            font-family: 'Amiri', 'Traditional Arabic', serif;
+            font-size: 1.4rem;
+            color: #00cec9;
+        }
+
+        .bg-dark-custom {
+            background-color: #0a0a0a;
+        }
+
+        .text-teal-light {
+            color: #00cec9;
+        }
+
+        .pillar-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 206, 201, 0.08);
+            border-radius: 10px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        .pillar-box:hover {
+            border-color: rgba(0, 206, 201, 0.3);
+            background: rgba(0, 206, 201, 0.03);
+        }
+    </style>
+</head>
+<body class="bg-dark-custom text-white transition-theme min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-mosque text-2xl text-teal-400 float-animation"></i>
+                    <span class="text-xl font-bold gradient-text">IslamWeb</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#pendahuluan" class="hover:text-teal-400 transition font-medium text-white">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-teal-400 transition font-medium text-white">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-teal-400 transition font-medium text-white">Penutup</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fas fa-moon text-xl text-white"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-xl text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-col space-y-3">
+                    <a href="#pendahuluan" class="hover:text-teal-400 transition font-medium text-white py-2">Pendahuluan</a>
+                    <a href="#pembahasan" class="hover:text-teal-400 transition font-medium text-white py-2">Pembahasan</a>
+                    <a href="#penutup" class="hover:text-teal-400 transition font-medium text-white py-2">Penutup</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&h=600&fit=crop" alt="Wudhu Background" class="w-full h-full object-cover opacity-10" />
+                <div class="absolute inset-0 bg-gradient-to-b from-dark-custom/90 to-dark-custom/95"></div>
+            </div>
+
+            <div class="container mx-auto text-center relative z-10 fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-block px-4 py-1 rounded-full bg-teal-500/20 text-teal-400 text-sm font-semibold mb-6">
+                        <i class="fas fa-star text-yellow-500 mr-2"></i>
+                        Ibadah
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 gradient-text">
+                        Panduan Lengkap Tata Cara Wudhu yang Sah
+                    </h1>
+                    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+                        <span><i class="fas fa-user mr-2"></i>Tim WebApp Islam</span>
+                        <span><i class="fas fa-calendar mr-2"></i>2026-09-07</span>
+                        <span><i class="fas fa-clock mr-2"></i>8 menit membaca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="toc-sticky glassmorphism rounded-2xl p-6 card-hover">
+                        <h3 class="text-lg font-bold mb-4 flex items-center text-white">
+                            <i class="fas fa-list-ul text-teal-400 mr-2"></i>
+                            Daftar Isi
+                        </h3>
+                        <nav class="space-y-2 text-sm">
+                            <a href="#pendahuluan" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Pendahuluan
+                            </a>
+                            <a href="#pengertian" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Pengertian Wudhu
+                            </a>
+                            <a href="#rukun" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Rukun Wudhu
+                            </a>
+                            <a href="#tata-cara" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Tata Cara Wudhu
+                            </a>
+                            <a href="#sunnah" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Sunnah-Sunnah Wudhu
+                            </a>
+                            <a href="#pembatal" class="block hover:text-teal-400 transition py-1 border-b border-white/10 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Pembatal Wudhu
+                            </a>
+                            <a href="#penutup" class="block hover:text-teal-400 transition py-1 text-white">
+                                <i class="fas fa-chevron-left text-teal-400 mr-2 text-xs"></i> Penutup
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Article -->
+                <article class="lg:w-3/4">
+                    <!-- Pendahuluan -->
+                    <section id="pendahuluan" class="fade-in">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">1</span>
+                                Pendahuluan
+                            </h2>
+
+                            <div class="ayat-box p-4 mb-6">
+                                <p class="arabic-text text-center mb-2">
+                                    يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ
+                                </p>
+                                <p class="text-center text-gray-300 text-sm italic">
+                                    "Hai orang-orang yang beriman, apabila kamu hendak mengerjakan shalat, maka basuhlah mukamu dan tanganmu sampai dengan siku, dan sapulah kepalamu dan (basuh) kakimu sampai dengan kedua mata kaki."<br />
+                                    <span class="font-semibold text-teal-400">QS. Al-Maidah: 6</span>
+                                </p>
+                            </div>
+
+                            <div class="prose">
+                                <p>
+                                    <strong class="text-teal-400">Wudhu</strong> adalah salah satu ibadah yang sangat 
+                                    penting dalam Islam. Wudhu merupakan syarat sahnya shalat dan menjadi 
+                                    pintu masuk untuk menghadap Allah SWT. Setiap muslim wajib mengetahui 
+                                    tata cara wudhu yang benar sesuai dengan tuntunan Rasulullah SAW.
+                                </p>
+                                <p class="mt-3">
+                                    Wudhu bukan hanya sekadar membersihkan anggota badan dari hadas kecil, 
+                                    tetapi juga memiliki dimensi spiritual yang mendalam. Setiap tetes air 
+                                    yang mengalir di anggota wudhu menjadi penghapus dosa-dosa kecil.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pengertian Wudhu -->
+                    <section id="pengertian" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">2</span>
+                                Pengertian Wudhu
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div>
+                                    <h3 class="font-semibold text-teal-400 mb-2 text-lg">A. Secara Bahasa</h3>
+                                    <p class="prose">
+                                        Kata "wudhu" berasal dari bahasa Arab <strong class="text-teal-400">الْوُضُوءُ</strong> 
+                                        yang berarti kebersihan atau keindahan. Secara etimologi, wudhu berarti 
+                                        membersihkan atau menyucikan diri.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-teal-400 mb-2 text-lg">B. Secara Istilah</h3>
+                                    <p class="prose">
+                                        Wudhu adalah <strong class="text-teal-400">menggunakan air pada anggota tubuh tertentu</strong> 
+                                        yang telah ditentukan syariat, dengan niat untuk menghilangkan hadas kecil 
+                                        dan menyucikan diri untuk beribadah kepada Allah SWT.
+                                    </p>
+                                </div>
+                                <div class="hadith-box">
+                                    <p class="text-sm text-gray-300">
+                                        <i class="fas fa-quote-left text-teal-400 mr-2"></i>
+                                        <strong>Rasulullah SAW bersabda:</strong> "Wudhu adalah kunci shalat, 
+                                        sebagaimana shalat adalah kunci surga." 
+                                        <span class="text-xs text-gray-500">(HR. Ahmad)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Rukun Wudhu -->
+                    <section id="rukun" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">3</span>
+                                Rukun Wudhu (6 Perkara)
+                            </h2>
+
+                            <div class="prose mb-4 text-gray-300">
+                                <p>Rukun wudhu adalah perkara yang wajib dilakukan dan jika ditinggalkan, 
+                                wudhu tidak sah. Ada 6 rukun wudhu:</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">1</span>
+                                        <h4 class="font-semibold text-teal-400">Niat</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Niat dalam hati untuk menghilangkan hadas dan beribadah kepada Allah.
+                                    </p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">2</span>
+                                        <h4 class="font-semibold text-teal-400">Membasuh Wajah</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Membasuh seluruh wajah dari dahi hingga dagu dan dari telinga kanan hingga kiri.
+                                    </p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">3</span>
+                                        <h4 class="font-semibold text-teal-400">Membasuh Tangan sampai Siku</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Membasuh kedua tangan hingga ke siku-siku, dimulai dari tangan kanan.
+                                    </p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">4</span>
+                                        <h4 class="font-semibold text-teal-400">Mengusap Kepala</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Mengusap sebagian atau seluruh kepala dengan air.
+                                    </p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">5</span>
+                                        <h4 class="font-semibold text-teal-400">Membasuh Kaki sampai Mata Kaki</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Membasuh kedua kaki hingga mata kaki, dimulai dari kaki kanan.
+                                    </p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <span class="step-number" style="width: 30px; height: 30px; font-size: 0.75rem;">6</span>
+                                        <h4 class="font-semibold text-teal-400">Tertib (Berurutan)</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Melakukan rukun-rukun di atas secara berurutan sesuai dengan yang telah ditentukan.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-teal-500/10 rounded-lg border border-teal-500/20">
+                                <p class="text-sm text-teal-400 text-center">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    <strong>Catatan:</strong> Jika salah satu rukun ini ditinggalkan, wudhu tidak sah.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tata Cara Wudhu -->
+                    <section id="tata-cara" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">4</span>
+                                Tata Cara Wudhu Lengkap (13 Langkah)
+                            </h2>
+
+                            <div class="space-y-4">
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-bullseye"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">1</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Niat</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Berniat dalam hati untuk menghilangkan hadas kecil dan beribadah kepada Allah SWT.
+                                            </p>
+                                            <div class="mt-2 p-2 bg-white/5 rounded text-xs text-gray-400">
+                                                <span class="text-teal-400">Niat Wudhu:</span> 
+                                                "Nawaitul wudhu'a liraf'il hadatsil ashghari fardhan lillahi ta'ala" 
+                                                (Saya niat wudhu untuk menghilangkan hadas kecil, fardhu karena Allah Ta'ala)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-hand-sparkles"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">2</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Membaca Basmalah</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Membaca "Bismillahirrahmanirrahim" (Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang).
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-hand-peace"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">3</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Membasuh Kedua Telapak Tangan</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Membasuh kedua telapak tangan sampai pergelangan tangan sebanyak 3 kali, 
+                                                dimulai dari tangan kanan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">4</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Berkumur dan Istinsyaq</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                <strong>Berkumur:</strong> Memasukkan air ke dalam mulut dan dikeluarkan sebanyak 3 kali.<br />
+                                                <strong>Istinsyaq:</strong> Menghirup air ke dalam hidung dan mengeluarkannya sebanyak 3 kali.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-face-smile"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">5</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Membasuh Wajah</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Membasuh seluruh wajah dengan air sebanyak 3 kali, dari dahi hingga dagu 
+                                                dan dari telinga kanan hingga telinga kiri.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-hand-peace"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">6</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Membasuh Tangan Sampai Siku</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Membasuh tangan kanan mulai dari ujung jari sampai siku sebanyak 3 kali, 
+                                                kemudian tangan kiri dengan cara yang sama.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-head-side-virus"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">7</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Mengusap Kepala</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Mengusap kepala dengan air sebanyak 1 kali, dari bagian depan ke belakang, 
+                                                lalu kembali ke depan. Bisa juga mengusap sebagian atau seluruh kepala.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-ear-listen"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">8</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Mengusap Kedua Telinga</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Mengusap bagian dalam dan luar telinga dengan air menggunakan jari 
+                                                telunjuk dan ibu jari sebanyak 1 kali.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-foot"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">9</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Membasuh Kaki Sampai Mata Kaki</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Membasuh kaki kanan mulai dari ujung jari sampai mata kaki sebanyak 3 kali, 
+                                                kemudian kaki kiri dengan cara yang sama. Pastikan sela-sela jari kaki ikut dibasuh.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">10</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Tertib (Berurutan)</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Melakukan semua langkah di atas secara berurutan tanpa terputus.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-hand-sparkles"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">11</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Tidak Berlebih-lebihan dalam Menggunakan Air</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Menggunakan air secukupnya, tidak boros dan tidak terlalu sedikit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">12</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Doa Setelah Wudhu</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Setelah selesai wudhu, membaca doa:
+                                            </p>
+                                            <div class="doa-box mt-2">
+                                                <p class="doa-arabic">
+                                                    أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+                                                </p>
+                                                <p class="text-sm text-gray-300 mt-2">
+                                                    "Aku bersaksi bahwa tiada Tuhan selain Allah Yang Maha Esa, tidak ada sekutu bagi-Nya, 
+                                                    dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya."
+                                                </p>
+                                                <p class="text-xs text-gray-400 mt-1">
+                                                    (HR. Muslim)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-card">
+                                    <div class="flex items-start gap-4">
+                                        <div class="step-icon">
+                                            <i class="fas fa-pray"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="flex items-center gap-3 mb-2">
+                                                <span class="step-number">13</span>
+                                                <h4 class="font-bold text-lg text-teal-400">Shalat Sunnah Wudhu</h4>
+                                            </div>
+                                            <p class="text-sm text-gray-300">
+                                                Disunnahkan untuk melaksanakan shalat sunnah 2 rakaat setelah wudhu 
+                                                sebagai bentuk syukur dan menyempurnakan ibadah.
+                                            </p>
+                                            <div class="hadith-box mt-2">
+                                                <p class="text-sm text-gray-300">
+                                                    <i class="fas fa-quote-left text-teal-400 mr-2"></i>
+                                                    <strong>Rasulullah SAW bersabda:</strong> "Barangsiapa berwudhu seperti wudhuku, 
+                                                    kemudian shalat dua rakaat tanpa berbicara dalam hatinya, 
+                                                    maka akan diampuni dosa-dosanya yang telah lalu." 
+                                                    <span class="text-xs text-gray-500">(HR. Bukhari)</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Sunnah-Sunnah Wudhu -->
+                    <section id="sunnah" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">5</span>
+                                Sunnah-Sunnah Wudhu
+                            </h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Membaca Basmalah</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Membaca Bismillah sebelum memulai wudhu.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Membasuh Telapak Tangan 3 Kali</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Membasuh kedua telapak tangan sebanyak 3 kali di awal wudhu.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Berkumur dan Istinsyaq 3 Kali</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Berkumur dan menghirup air ke hidung sebanyak 3 kali.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Mengusap Seluruh Kepala</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Mengusap seluruh kepala, bukan hanya sebagian.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Mengusap Kedua Telinga</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Mengusap bagian dalam dan luar telinga.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Mendahulukan Anggota Kanan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Mendahulukan anggota tubuh bagian kanan dari pada kiri.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Menyela Jari-jari</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Menyela jari-jari tangan dan kaki saat membasuh.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-check-circle text-teal-400"></i>
+                                        <h4 class="font-semibold text-teal-400">Berdoa Setelah Wudhu</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Membaca doa setelah selesai wudhu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pembatal Wudhu -->
+                    <section id="pembatal" class="mt-8">
+                        <div class="bg-white/5 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-white/5">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-white">
+                                <span class="section-number mr-3">6</span>
+                                Hal-Hal yang Membatalkan Wudhu
+                            </h2>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-hand-peace text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">1. Keluar Sesuatu dari Dua Jalan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Air kencing, tinja, kentut, atau darah yang keluar dari qubul dan dubur.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-moon text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">2. Tidur yang Nyenyak</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Tidur yang membuat seseorang tidak sadar dan tidak menyadari apa yang keluar dari tubuhnya.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-brain text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">3. Hilang Akal</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Hilang akal karena gila, pingsan, atau mabuk.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-hand-peace text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">4. Bersentuhan Kulit dengan Lawan Jenis</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Bersentuhan kulit langsung dengan lawan jenis yang bukan mahram.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-hand-peace text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">5. Menyentuh Kemaluan</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Menyentuh kemaluan dengan telapak tangan tanpa penghalang.</p>
+                                </div>
+                                <div class="pillar-box">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-utensils text-red-400"></i>
+                                        <h4 class="font-semibold text-red-400">6. Makan Daging Unta</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-300 mt-1">Makan daging unta (menurut pendapat sebagian ulama).</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-red-500/10 rounded-lg border border-red-500/20">
+                                <p class="text-sm text-red-400 text-center">
+                                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                                    <strong>Peringatan:</strong> Jika salah satu hal di atas terjadi, maka wudhu menjadi batal 
+                                    dan harus diulang kembali sebelum melaksanakan shalat.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Penutup -->
+                    <section id="penutup" class="mt-8 fade-in">
+                        <div class="bg-gradient-to-br from-teal-500/5 to-teal-500/10 rounded-2xl p-6 md:p-8 shadow-lg card-hover border border-teal-500/20">
+                            <h2 class="text-2xl font-bold mb-4 flex items-center text-teal-400">
+                                <i class="fas fa-check-circle mr-3"></i>
+                                Penutup
+                            </h2>
+                            <div class="prose">
+                                <p>
+                                    Wudhu adalah <strong class="text-teal-400">syarat sahnya shalat</strong> dan menjadi 
+                                    pintu masuk untuk menghadap Allah SWT. Setiap muslim wajib mengetahui 
+                                    tata cara wudhu yang benar sesuai dengan tuntunan Rasulullah SAW.
+                                </p>
+                                <p class="mt-3">
+                                    Dengan memahami tata cara wudhu dengan benar, kita dapat memastikan 
+                                    bahwa ibadah shalat kita diterima oleh Allah SWT. Wudhu juga menjadi 
+                                    sarana untuk <strong class="text-teal-400">membersihkan diri secara fisik dan spiritual</strong>, 
+                                    menghapus dosa-dosa kecil, dan mendekatkan diri kepada Allah.
+                                </p>
+                                <p class="mt-3 font-semibold text-teal-400">
+                                    "Ya Allah, sucikanlah diriku dengan air, sucikanlah hatiku dengan keimanan, 
+                                    dan ampunilah dosa-dosaku sebagaimana Engkau telah menyucikan diriku."
+                                </p>
+                            </div>
+                            <div class="mt-6 p-4 bg-white/5 rounded-xl text-center">
+                                <p class="text-sm text-gray-400">
+                                    <i class="fas fa-book-open mr-2 text-teal-400"></i>
+                                    <strong class="text-white">Wallahu a'lam bish-shawab.</strong> 
+                                    (Hanya Allah yang Maha Mengetahui kebenaran)
+                                </p>
+                            </div>
+                            <div class="mt-4 p-3 bg-teal-500/10 rounded-lg text-center text-sm">
+                                <p class="text-gray-400">
+                                    <strong class="text-teal-400">Referensi:</strong> Al-Qur'an dan Terjemahannya, 
+                                    Shahih Bukhari & Muslim, Fiqih Sunnah, Kitab Shalat
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Share & Action -->
+                    <div class="mt-8 flex flex-wrap items-center justify-between gap-4 p-4 glassmorphism rounded-2xl">
+                        <div class="flex items-center gap-3">
+                            <span class="text-sm font-medium text-white">Bagikan:</span>
+                            <button onclick="shareArticle('twitter')" class="p-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 transition">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button onclick="shareArticle('facebook')" class="p-2 rounded-full bg-blue-600/20 hover:bg-blue-600/30 text-blue-500 transition">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button onclick="shareArticle('whatsapp')" class="p-2 rounded-full bg-green-500/20 hover:bg-green-500/30 text-green-400 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button onclick="shareArticle('copy')" class="p-2 rounded-full bg-gray-500/20 hover:bg-gray-500/30 text-gray-400 transition">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="px-4 py-2 gradient-bg text-dark-custom rounded-lg hover:shadow-lg transition font-semibold">
+                            <i class="fas fa-arrow-up mr-2"></i>
+                            Kembali ke Atas
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glassmorphism mt-12 border-t border-white/10">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4 gradient-text">
+                        <i class="fas fa-mosque mr-2"></i>IslamWeb
+                    </h3>
+                    <p class="text-sm text-gray-400">
+                        Media dakwah digital menyajikan artikel-artikel Islami yang inspiratif dan edukatif.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Kategori</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-teal-400 transition">Aqidah</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Ibadah</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Sejarah</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Akhlak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Tentang</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-teal-400 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Kontak</a></li>
+                        <li><a href="#" class="hover:text-teal-400 transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-teal-400 transition text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-teal-400 transition text-xl">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
+                &copy; 2026 IslamWeb. Dibuat dengan <i class="fas fa-heart text-red-500"></i> untuk menyebarkan kebaikan
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        (function() {
+            'use strict';
+
+            // Dark Mode (always dark)
+            document.documentElement.classList.add('dark');
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            themeIcon.className = 'fas fa-sun text-xl text-white';
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    if (themeIcon.classList.contains('fa-sun')) {
+                        themeIcon.className = 'fas fa-moon text-xl text-white';
+                    } else {
+                        themeIcon.className = 'fas fa-sun text-xl text-white';
+                    }
+                });
+            }
+
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Progress Bar
+            const progressBar = document.getElementById('progress-bar');
+
+            function updateProgressBar() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (progressBar) {
+                    progressBar.style.width = scrollPercent + '%';
+                }
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+            window.addEventListener('resize', updateProgressBar);
+            updateProgressBar();
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Share Function
+            window.shareArticle = function(platform) {
+                const url = window.location.href;
+                const title = 'Panduan Lengkap Tata Cara Wudhu yang Sah';
+
+                let shareUrl = '';
+                switch (platform) {
+                    case 'twitter':
+                        shareUrl =
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                        break;
+                    case 'whatsapp':
+                        shareUrl =
+                            `https://api.whatsapp.com/send?text=${encodeURIComponent(title + ' ' + url)}`;
+                        break;
+                    case 'copy':
+                        navigator.clipboard.writeText(url).then(() => {
+                            alert('Link berhasil disalin!');
+                        }).catch(() => {
+                            const textarea = document.createElement('textarea');
+                            textarea.value = url;
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(textarea);
+                            alert('Link berhasil disalin!');
+                        });
+                        return;
+                }
+
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank', 'width=600,height=400');
+                }
+            };
+
+        })();
+    </script>
+
+</body>
+</html>
